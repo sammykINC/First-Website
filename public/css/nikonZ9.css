@@ -350,8 +350,3 @@ div.container {
  color: #13ae4b;
 }
 
-.scrollspy {
- position: relative;
- height: 584px;
- overflow: auto;
-}
