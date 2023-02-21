@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixelated</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="login.html">
+  <link rel="stylesheet" href="signup.html">
+  <link rel="stylesheet" href="css/k.css">
+  <script type="module" src="js/app.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+
+<body>
+
+  <!-- import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js"
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"
+
+
+const firebaseApp = initializeApp({
+  apiKey: "AIzaSyBiO57t0kq1-_KcKKKNhHDkIPsR-hrmTeM",
+  authDomain: "website-fc69a.firebaseapp.com",
+  projectId: "website-fc69a",
+  storageBucket: "website-fc69a.appspot.com",
+  messagingSenderId: "97197648004",
+  appId: "1:97197648004:web:5cee6bbecf2a4ca2e67ad1",
+  measurementId: "G-ECY84NHXML"
+});
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db =  getFirestore(app);
+
+// detect auth state
+onAuthStateChanged(auth, user => {
+  if (user != null) {
+    console.log('logged in!');
+  } else {
+    console.log('No user');
+  }
+}); -->
+
+
+<!-- Navbar -->
+<div>
+  <div class="header-blue">
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+      <div class="container">
+        <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 me-4 fw-bold">
+          <img src="images/logo/logo_4_white.png" alt="Bootstrap"  width="40px" class="me-1" >
+          Pixelated
+        </a>
+
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navcol-1">
+    <ul class="nav col-12 col-lfg-auto me-lg-auto mb-2 justify-content-left mb-md-0">
+      <li><a href="index.html" class="nav-link px-2 text-primary">
+        Homepage</a>
+      </li>
+      <li><a href="products.html" class="nav-link px-2 text-white">
+        Products</a>
+      </li>
+      <li><a href="#" class="nav-link px-2 text-white">
+        Favorites</a>
+      </li>
+      <li><a href="#" class="nav-link px-2 text-white">
+        About Us</a>
+      </li>
+      <li><a href="#" class="nav-link px-2 text-white">
+        Professional Tips</a>
+      </li>
+          
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      More
+    </a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Support</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">Shipping</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="dropdown-item" href="#">News & Events</a></li>
+    </ul>
+  </li>
+
+  <div>
+    <div class="form-outline form-white">
+      <input type="search" id="form5Example29" class="form-control" placeholder="Search..." />
+    </div>
+  </div>
+
+    </ul>
+</div>
+
+  <div class="d-flex align-items-center">
+    <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
+      Login
+    </button>
+
+    <button type="button" class="btn btn-dark me-2" href="signup.html" onclick="document.location.href='signup.html'">
+      Sign up for free
+    </button>
+  </div>
+    </nav>
+    
+<!--  -->
+    <header>
+      <div class="container hero">
+        <div class="row">
+    
+          <div class="col-12 col-lg-6 col-xl-5 offset-xl-1">
+            <h1>Unlock 20+ new Z 9 features
+              and enhancements.
+            </h1>
+            <p>
+              The Z 9 is more than a camera. It’s a platform designed to evolve. To gain new features and functionality. To become more flexible and intelligent. All through major firmware updates. The latest step in that evolution? Firmware 3.0. Unlock more than 20 new features and enhancements for video, high-speed shooting, autofocus, operation and more.
+            </p>
+            <button class="btn btn-outline-primary btn-lg action-button" type="button" onclick="document.location.href='nikonZ9.html'">
+              Discover</button>
+          </div>
+    
+          <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block w-50">
+            <div class="camera-hero">
+              <img src="https://cdn-7.nikon-cdn.com/Images/CPCAssets/pdp/z9/pdp/img/hero-camera.png" class="device">
+                <div class="screen"></div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </header>
+    <!--  -->
+
+  </div>
+</div>
+<!-- Navbar -->
+
+
+
+<!-- Footer -->
+<footer class="bg-dark text-center text-white">
+  <div class="container pb-0">
+    <section class="">
+      <form action="">
+        <div class="row d-flex justify-content-center">
+          <div class="col-auto">
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2023 Copyright:
+    <a class="text-white" href="index.html">Pixelated.com</a>
+  </div>
+</footer>
+<!-- Footer -->
+
+
+ 
+<!--          Bootstrap prijungimas           -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<!--  -->
+</body>
+</html>
