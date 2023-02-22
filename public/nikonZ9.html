@@ -8,163 +8,192 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/nikonZ9.css">
+
 </head>
 
 
 <body>
 
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg text-bg-dark sticky-top">
-  <div class="container">
-    <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 me-4 fw-bold">
-      <img src="images/logo/logo_4_white.png" alt="Bootstrap"  width="40px" class="me-1" >
-Pixelated
-    </a>
-
+  <nav class="navbar navbar-expand-lg text-bg-dark sticky-top" style="padding-left: 9px; padding-top: 9px;">
+    <div class="container ps-3" >
+      <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 me-4 fw-bold">
+        <img src="images/logo/logo_4_white.png" alt="Bootstrap"  width="40px" class="me-1" >
+        Pixelated
+      </a>
+  
     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="index.html" class="nav-link px-2 text-primary">
-        Homepage</a></li>
-        <li><a href="products.html" class="nav-link px-2 text-white">
-        Products</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">
-        Favorites</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">
-        About Us</a></li>
-        <li><a href="#" class="nav-link px-2 text-white">
-        Professional Tips</a></li>
+      <li>
+        <a href="index.html" class="nav-link px-2 text-white">
+        Homepage</a>
+      </li>
+      <li>
+        <a href="products.html" class="nav-link px-2 text-primary">
+          Products</a>
+      </li>
+      <li>
+        <a href="#" class="nav-link px-2 text-white">
+        Favorites</a>
+      </li>
+      <li>
+        <a href="#" class="nav-link px-2 text-white">
+        About Us</a>
+      </li>
+      <li>
+        <a href="#" class="nav-link px-2 text-white">
+        Professional Tips</a>
+      </li>
         
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Support</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Shipping</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">News & Events</a></li>
-          </ul>
-        </li>
-        <div>
-          <div class="form-outline form-white">
-            <input type="search" id="form5Example29" class="form-control" placeholder="Search..." />
-          </div>
-        </div>
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        More
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Support</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Shipping</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">News & Events</a></li>
+      </ul>
+    </li>
+  
+    <div>
+      <div class="form-outline form-white">
+        <input type="search" id="form5Example29" class="form-control" placeholder="Search..." />
+      </div>
+    </div>
+  
     </ul>
-
-    
-
+  
     <div class="d-flex align-items-center">
-        <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
-            Login
-        </button>
-
-        <button type="button" class="btn btn-primary me-2" href="signup.html" onclick="document.location.href='signup.html'">
-            Sign up for free
-        </button>
+      <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
+        Login
+      </button>
+      <button type="button" class="btn btn-primary me-1" href="signup.html" onclick="document.location.href='signup.html'">
+        Sign up for free
+      </button>
     </div>
-
+  
     </div>
-  </div>
-</nav>
-<!-- Navbar -->
+  
+  </nav>
+  <!-- Navbar -->
 
 
 <!-- Product Information -->
 <div class="container">
   <div class="single_product">
-      <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
+      <div class="container-fluid" style="background-color: #fff; padding: 11px;">
           <div class="row">
 
               <div class="col-lg-2 order-lg-1 order-2">
                   <ul class="image_list">
 
                       <li data-image="images/cameras/Nikon-Z9_ProductF.jpg">
-                        <img src="images/cameras/Nikon-Z9_ProductF.jpg" alt=""></li>
+                        <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%"></li>
+            
 
-                      <li data-image="images/cameras/Nikon-Z9_ProductB.jpg">
-                        <img src="images/cameras/Nikon-Z9_ProductB.jpg" alt="""></li>
+                      <li data-image="images/cameras/Nikon-Z9_ProductB.jpg" class="object">
+                        <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%;"></li>
                         
                   </ul>
               </div>
 
-              <div class="col-lg-4 order-lg-2 order-1">
-                <div class="image_selected">
-                    <img src="images/cameras/Nikon-Z9_ProductF.jpg" alt="">
+              <div class="col-lg-4 order-lg-2 order-1 ">
+                <div class="image_selected p-3">
+                    <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 120px">
                 </div>
               </div>
               
 <!-- Product Description -->
-    <div class="col-lg-6 order-3">
-    <div class="product_description">
+  <div class="col-lg-6 order-3">
+  <div class="product_description ms-3">
 
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-                <li class="breadcrumb-item"><a href="products.html">Products</a></li>
-                <li class="breadcrumb-item active">Details</li>
-            </ol>
-        </nav>
+  <nav>
+    <ol class="breadcrumb mb-3" style="height: 20px;">
+      <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
+      <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+      <li class="breadcrumb-item active">Details</li>
+    </ol>
+  </nav>
 
-    <div class="product_name">Nikon Z 9 Body</div>
+  <div class="product_name">Nikon Z 9 Body</div>
 
-    <div> 
-        <span class="product_price mb-2">
-        $6,999.00
-        </span>
-    </div>
+  <div> 
+      <span class="product_price mb-2">
+      $6,999.00
+      </span>
+  </div>
 
-        <hr class="singleline mt-0">
-    <div> 
-        <span class="product_info">
-            Resolution: 45.7 megapixels<span><br> 
-        <span class="product_info">
-            Sensor: 35.9x23.9mm FX Full-Frame<span><br> 
-        <span class="product_info">
-            Video Resolution: 8K<span><br> 
-        <span class="product_info">
-            Continuous Shooting Speed: 20fps<span><br> 
-        <span class="product_info">
-            Lens Mount: Nikon Z<span> 
-        <span class="product_info">
-            Shutter Speed: 30sec - 1/32,000sec<span> 
-        <span class="product_info">
-            ISO Sensitivity: (32) 64 - 25,600 (102,400)<span> 
-        <span class="product_info">
-            Screen Size: 3.2"<span> 
-        <span class="product_info">
-            Recording Media: CFexpress Type B, XQD<span> 
-        <span class="product_info">
-            Frame Rate: 120fps (1080p), 30p (8K)<span> 
-        <span class="product_info">
-            Audio Inputs: 3.5mm stereo minijack<span> 
-        <span class="product_info">
-            Power Source: EN-EL18D, EN-EL18a/b/c<span> 
-        <span class="product_info">
-            GPS: Yes<span> 
-        <span class="product_info">
-            Weatherproof: Weather resistant<span> 
-        <span class="product_info">
-            Dimensions: 14.9x14.9x9.0cm<span> 
-        <span class="product_info">
-            Weight: 1.16kg<span> 
-    </div>
+      <hr class="singleline mt-0 pb-0">
+  <div> 
+      <span class="product_info">
+          Resolution: 45.7 megapixels<span><br> 
+      <span class="product_info">
+          Sensor: 35.9x23.9mm FX Full-Frame<span><br> 
+      <span class="product_info">
+          Video Resolution: 8K<span><br> 
+      <span class="product_info">
+          Continuous Shooting Speed: 20fps<span><br> 
+      <span class="product_info">
+          Lens Mount: Nikon Z<span> 
+      <span class="product_info">
+          Shutter Speed: 30sec - 1/32,000sec<span> 
+      <span class="product_info">
+          ISO Sensitivity: (32) 64 - 25,600 (102,400)<span> 
+      <span class="product_info">
+          Screen Size: 3.2"<span> 
+      <span class="product_info">
+          Recording Media: CFexpress Type B, XQD<span> 
+      <span class="product_info">
+          Frame Rate: 120fps (1080p), 30p (8K)<span> 
+      <span class="product_info">
+          Audio Inputs: 3.5mm stereo minijack<span> 
+      <span class="product_info">
+          Power Source: EN-EL18D, EN-EL18a/b/c<span> 
+      <span class="product_info">
+          GPS: Yes<span> 
+      <span class="product_info">
+          Weatherproof: Weather resistant<span> 
+      <span class="product_info">
+          Dimensions: 14.9x14.9x9.0cm<span> 
+      <span class="product_info">
+          Weight: 1.16kg<span> 
+  </div>
 
     
 
 
-    <hr class="singleline">
-    <div class="order_info d-flex flex-row">
-        <form action="#">
-    </div>
+  <hr class="singleline">
+  <div class="order_info d-flex flex-row">
+    <form action="#">
+  </div>
 
-    <div class="row">
-        <div class="col-xs-6"> 
-        <button type="button" class="btn btn-primary shop-button">Add to Cart</button> 
-      <button type="button" class="btn btn-success shop-button">Buy Now</button>
-        </div>
-    </div>
-    </div>
+  <div class="row">
+      <div class="col-xs-6"> 
+
+        <!-- plus minus button -->
+
+        <!-- <div class="input-group">
+          <input type="button" value="-" class="button-minus" data-field="quantity">
+          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
+          <input type="button" value="+" class="button-plus" data-field="quantity">
+        </div> -->
+
+        <!-- plus minus button -->
+
+        <button type="button" class="btn btn-primary shop-button">
+          Add to Cart
+        </button> 
+
+        <button type="button" class="btn btn-success shop-button">
+          Buy Now
+        </button>
+
+      </div>
+  </div>
+
+  </div>
 </div>
 <!-- Product Description -->
 </div>
@@ -248,24 +277,25 @@ Pixelated
   <!--          2           -->
 </div>
 
-
 <div class="row row-underline"></div>
 
-</div>
-
-
-<div class="accordion" id="accordionflushExample">
-  <!-- Item Start -->
-  <div class="accordion-item-1">
+<!-- Description -->
+<div class="accordion mb-2" id="accordionExample">
+  <div class="accordion-item rounded-0" >
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Subject detection from deep learning. Automatic. Simultaneous.
+      <button class="accordion-button rounded-0 fw-medium text-black bg-primary-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size:18px">
+        Description
       </button>
     </h2>
-
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+    <div id="collapseOne" class="accordion-collapse collapse">
       <div class="accordion-body">
-        <p>
+        <p class="text">The Nikon Z 9 takes mirrorless photography to new heights, delivering incredible performance and image quality combined with new professional features like 8K 60p video, a true blackout-free viewfinder, and unlimited connectivity. All of this, and more, is powered by a brand new 45.7-megapixel full-frame sensor and the EXPEED 7 processor.
+        </p>
+    <!--  -->
+        <h6 class="title">
+          Subject detection from deep learning. Automatic. Simultaneous.
+        </h6>
+        <p class="text">
           A breakthrough algorithm developed using deep learning enables the Z 9 to automatically detect and track the world’s largest range of subjects—people, dogs, cats, birds, cars, motorcycles, bicycles, trains and planes—in stills and video with no menu changes.
         </p>
         <p>
@@ -280,21 +310,10 @@ Pixelated
         <p>
           Eye Detection AF automatically tracks the eyes of people, dogs, cats and birds (and similar creatures) even when they’re small in the frame, covered by hair, glasses or goggles, right-side up or upside down.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-2">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        3D Tracking + Subject Detection. A new dimension of AF.
-      </button>
-    </h2>
-
-    <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          3D Tracking + Subject Detection. A new dimension of AF.
+        </h6>
         <p>
           The power of Nikon’s acclaimed 3D Tracking is now available with deep learning subject detection. Effortlessly lock onto fast-moving subjects and track them moving toward you, away from you and everywhere in between.
         </p>
@@ -304,185 +323,89 @@ Pixelated
         <p>
           Subject detection and AF works all the way down to -6.5 EV. Activate Starlight Mode, and focus all the way down to -8.5 EV. And since you’ll be spending more time in the dark, the Z 9’s buttons are illuminated.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-3">
-    <h2 class="accordion-header" id="headingThree">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        A groundbreaking new processing engine.
-      </button>
-    </h2>
-
-    <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          A groundbreaking new processing engine.
+        </h6>
         <p>
           EXPEED 7. The most powerful Nikon processing engine ever. 10x faster than previous generations. Handles complex AF and AE calculations at 120 cycles per second. Separately processes dual-streamed data from the stacked image sensor. Enables next-generation features like 120 fps still shooting, 8K video recording, a blackout-free viewing experience and more.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-4">
-    <h2 class="accordion-header" id="headingFour">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-        Go from zero to 120 fps in the press of a shutter.
-      </button>
-    </h2>
-
-    <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          Go from zero to 120 fps in the press of a shutter.
+        </h6>
         <p>
           To capture moments you may never have seen before, the Z 9 captures 45.7-megapixel stills at an action-freezing 30 fps and press-ready 11-megapixel stills at an insanely fast 120 fps—all with full AF and AE performance and no blackout.
         </p>
         <p>
           Keep your finger down. 1,000-image buffer capacity.
         </p>
-        <p>
+        <p></p>
           With a seemingly bottomless buffer, the Z 9 shoots continuously for more than 1,000 frames at 20 fps* as full resolution High-Efficiency RAW or JPEG (L) fine files.
         </p>
-        <p style="font-style:italic">
-          *When using high-speed CFexpress Type B 2.0 cards
+        <p>
+          <i>When using high-speed CFexpress Type B 2.0 cards</i>
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-5">
-    <h2 class="accordion-header" id="headingFive">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-        The fastest write speeds. Dual CFexpress Type B.
-      </button>
-    </h2>
-
-    <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          The fastest write speeds. Dual CFexpress Type B.
+        </h6>
         <p>
           Under a newly designed latching door are two matched slots optimized for high-performance CFexpress Type B cards. The slots are independent from each other, so you can load cards with different write speeds—including XQD cards.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-6">
-    <h2 class="accordion-header" id="headingSix">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-        Finally, an electronic shutter you can trust.
-      </button>
-    </h2>
-
-    <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          Finally, an electronic shutter you can trust.
+        </h6>
         <p>
           The electronic shutter in the Z 9 achieves the world’s most minimal rolling-shutter distortion2, eliminating the need for a mechanical shutter. Shoot at shutter speeds up to 1/32,000 second in complete silence, with no shutter vibration and no concerns about shutter wear.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-7">
-    <h2 class="accordion-header" id="headingSeven">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-        Silent mode. Become invisible.
-      </button>
-    </h2>
-
-    <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          Silent mode. Become invisible.
+        </h6>
         <p>
           When you need to be invisible, Silent Mode turns off menu sounds and VR Lock and minimizes lens drive noises. And since the Z 9 does not have a mechanical shutter, you can shoot without a shutter click—or plug in headphones so only you can hear the simulated shutter sound.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-8">
-    <h2 class="accordion-header" id="headingEight">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-        8K/30p. In-camera. No overheating.
-      </button>
-    </h2>
-
-    <div id="collapseEight" class="accordion-collapse collapse show" aria-labelledby="headingEight">
-      <div class="accordion-body">
+    <!--  -->
+        <h6 class="title">
+          8K/30p. In-camera. No overheating.
+        </h6>
         <p>
           With an innovative body design that efficiently dissipates heat, the Z 9 records lush 10-bit 8K UHD video at 24, 25 or 30 fps internally for over 2 hours straight*—with no risk of overheating. Need stills from your shoot? Save 33-megapixel frame grabs right from your footage.
         </p>
-        <p style="font-style:italic">
-          *At a temperature of 23°C/73.4°F 
+        <p>
+          <i>*At a temperature of 23°C/73.4°F</i>
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-9">
-    <h2 class="accordion-header" id="headingNine">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-        4K/30p from oversampled 8K.
-      </button>
-    </h2>
-
-    <div id="collapseNine" class="accordion-collapse collapse show" aria-labelledby="headingNine">
-      <div class="accordion-body">
+        <!--  -->
+        <h6 class="title">
+          4K/30p from oversampled 8K.
+        </h6>
         <p>
           Record dense 10-bit 4K UHD footage in-camera with full pixel readout from the Z 9’s outstanding sensor at 24, 25, 30p as ProRes 422 HQ or H.265 video. Or create dramatic 4K UHD slow motion sequences up to 120p. A 2.3x crop format with full pixel readout is available for getting closer to your subject without changing lenses.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-10">
-    <h2 class="accordion-header" id="headingTen">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-        Steady handheld shooting. Enhanced electronic VR.
-      </button>
-    </h2>
-
-    <div id="collapseTen" class="accordion-collapse collapse show" aria-labelledby="headingTen">
-      <div class="accordion-body">
+        <!--  -->
+        <h6 class="title">
+          Steady handheld shooting. Enhanced electronic VR.
+        </h6>
         <p>
           The intelligence and processing power within EXPEED 7 improves electronic VR for video recording, correcting trapezoid distortion from wide angle lenses and allowing you to create smooth handheld walking shots.
         </p>
-      </div>
-    </div>
-  </div>
-  <!-- Item End -->
-
-  <!-- Item Start -->
-  <div class="accordion-item-11">
-    <h2 class="accordion-header" id="headingEleven">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-        Stacked CMOS sensor. 45.7-megapixels. Full frame.
-      </button>
-    </h2>
-
-    <div id="collapseEleven" class="accordion-collapse collapse show" aria-labelledby="headingEleven">
-      <div class="accordion-body">
+        <!--  -->
+        <h6 class="title">
+          Stacked CMOS sensor. 45.7-megapixels. Full frame.
+        </h6>
         <p>
           Designed by Nikon specifically to bring ultra-high-resolution image quality to high-speed shooting applications. Achieves the world’s fastest scanning speed, 12x faster data readout than the acclaimed Z 7II and absolutely spectacular image quality in stills and 8K videos.
         </p>
       </div>
     </div>
   </div>
-  <!-- Item End -->
 </div>
+<!-- Description -->
+
+
+
 
 
 
@@ -521,5 +444,7 @@ Pixelated
 
     <!--          Bootstrap prijungimas           -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <!--          Bootstrap prijungimas           -->
+<script src="js/nikonZ9.js"></script>
 </body>
 </html>

@@ -1,25 +1,18 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { 
   getAuth, 
   onAuthStateChanged, 
   GoogleAuthProvider, 
   signInWithPopup, 
-  GoogleAuthProvider, 
   signInWithRedirect, 
   getRedirectResult, 
   connectAuthEmulator,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-} from "firebase/auth";
-
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db = getFirestore(app);
+} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCFNxYlLhsuMZ2CDkYzehLrrld7Otgbguc",
@@ -30,6 +23,11 @@ const firebaseConfig = {
   appId: "1:816489026486:web:722dcaf021373b10306717",
   measurementId: "G-XRNJ7XBBTF"
 };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+const db = getFirestore(app);
 
 // detect auth statex
 const auth = getAuth(app);
@@ -44,18 +42,3 @@ onAuthStateChanged(auth, (user) => {
     console.log('No user');
   }
 });
-
-login.addEventListener('click',(e) => {
-  signInWithRedirect(auth, provider);
-  getRedirectResult(auth)
-  .then((result) => {
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    const user = result.user;
-  }).catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    const email = error.customData.email;
-    const credential = GoogleAuthProvider.credentialFromError(error);
-  });
-})
