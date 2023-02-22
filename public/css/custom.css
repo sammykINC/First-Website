@@ -1,0 +1,31 @@
+.nav-link {
+ color: white;
+}
+
+.nav-link:hover {
+ color: #0d6efd;
+}
+
+footer div a {
+ text-decoration: none;
+ color: rgba(255, 255, 255, 0.5);
+}
+
+footer div a:hover{
+ color: rgba(255, 255, 255, 0.685);
+}
+
+/* .shadow {
+ box-shadow: inset 0px 0px 30px 9px rgba(0, 0, 0, 0.3);
+} */
+
+#bgh1 {
+ font-size: 70px;
+ color:rgba(255, 255, 255, 0.76)
+}
+
+#bgh4 {
+ font-size: 40px;
+ color:rgba(255, 255, 255, 0.76);
+ padding-bottom: 10px;
+}
