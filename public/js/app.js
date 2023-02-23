@@ -12,6 +12,7 @@ import {
   connectAuthEmulator,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -33,12 +34,59 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
+
+// REGISTER
+
 // Set an authentication state observer and get user data
+const signupForm = document.querySelector('#signup-form');
+
+signupForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  // get user info
+  const email = signupForm['validationCustom03'].value;
+  const password = signupForm['validationCustom05'].value;
+
+  // console.log(email, password);
+
+  // sign up the user
+  createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // window.location.replace("index.html");
+
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  })
+
+  
+  
+})
+
+// LOGOUT
+
+const logout = document.querySelector('#logout');
+logout.addEventListener('click', (e) => {
+  signOut(auth).then(() => {
+    console.log('user signed out')
+    // window.location.replace("index.html");
+
+  }).catch((error) => {
+    console.log('error')
+  });
+});
+
+
 onAuthStateChanged(auth, (user) => {
   if (user != null) {
     const uid = user.uid;
-    console.log('logged in!');
+    console.log('User has been successfully registered!');
   } else {
     console.log('No user');
   }
 });
+
