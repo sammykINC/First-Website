@@ -16,12 +16,12 @@
 
 
 <!-- Navigation-->
-<nav class="navbar navbar-dark navbar-expand-md navigation-clean-search bg-black sticky-top" 
+<nav class="navbar navbar-expand-md navigation-clean-search sticky-top" 
 style="padding-left: 17px;">
   <div class="container">
-    <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 me-4 fw-bold" >
+    <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
       <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="40px" class="me-1" >
-      Pixelated
+      <span class="logo__text">Pixelated</span> 
     </a>
 
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
@@ -30,17 +30,17 @@ style="padding-left: 17px;">
   </button>
 
   <div class="collapse navbar-collapse" id="navcol-1">
-    <ul class="nav col-12 col-lfg-auto me-lg-auto mb-2 justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link px-2 text-primary fw-medium">
+    <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
+      <li><a href="index.html" class="nav-link text-primary">
         Homepage</a>
       </li>
-      <li><a href="cameras.html" class="nav-link px-2 fw-medium">
+      <li><a href="cameras.html" class="nav-link">
         Cameras</a>
       </li>
-      <li><a href="aboutUs.html" class="nav-link px-2 fw-medium">
+      <li><a href="aboutUs.html" class="nav-link">
         About Us</a>
       </li>
-      <li><a href="contact.html" class="nav-link px-2 fw-medium">
+      <li><a href="contact.html" class="nav-link">
         Contact</a>
       </li>
     </ul>
@@ -51,8 +51,11 @@ style="padding-left: 17px;">
   <div class="d-flex align-items-center">
     <div class="position-relative" style="margin-right: 15px">
       <a href="#">
-        <img src="images/maybe.png" style="width: 22px" title="Shopping Cart">
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+        <img src="images/maybe.png" style="width: 25px" title="Shopping Cart">
+        <span class="position-absolute top-0 start-100 translate-middle badge bg-danger" style="
+        margin-top: 2px;
+        padding: 3px 6px;
+        border-radius: 20px">
           1
           <span class="visually-hidden">unread messages</span>
         </span>
@@ -687,9 +690,9 @@ style="padding-left: 17px;">
 
 
 <!-- Footer -->
-  <footer class="text-center text-lg-start bg-secondary-subtle text-dark">
+<footer class="text-center text-lg-start">
   <!-- Copyright -->
-  <div class="bg-black text-center py-4 sticky-bottom">
+  <div class="text-center py-4 sticky-bottom">
     <div class="container px-5">
       <div class="text-white-50 small">
           <div class="mb-2">© Pixelated 2023. All Rights Reserved.</div>
