@@ -6,13 +6,7 @@ import {
   getAuth, 
   onAuthStateChanged, 
   GoogleAuthProvider, 
-  signInWithPopup, 
-  signInWithRedirect, 
-  getRedirectResult, 
-  connectAuthEmulator,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signOut,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -29,64 +23,47 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 const db = getFirestore(app);
-
-// detect auth statex
-const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+const auth = getAuth(app);
 
-
-// REGISTER
-
-// Set an authentication state observer and get user data
-const signupForm = document.querySelector('#signup-form');
-
-signupForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  // get user info
-  const email = signupForm['validationCustom03'].value;
-  const password = signupForm['validationCustom05'].value;
-
-  // console.log(email, password);
-
-  // sign up the user
-  createUserWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    // window.location.replace("index.html");
-
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  })
-
-  
-  
-})
-
-// LOGOUT
-
-const logout = document.querySelector('#logout');
-logout.addEventListener('click', (e) => {
-  signOut(auth).then(() => {
-    console.log('user signed out')
-    // window.location.replace("index.html");
-
-  }).catch((error) => {
-    console.log('error')
-  });
-});
-
-
+// Auth state
 onAuthStateChanged(auth, (user) => {
   if (user != null) {
     const uid = user.uid;
-    console.log('User has been successfully registered!');
+    console.log('user has signed in');
   } else {
     console.log('No user');
   }
 });
+
+
+// Registration form
+
+// getting all the objecst of html
+var firstName = document.getElementById("firstName")
+var lastName = document.getElementById("lastName")
+var email = document.getElementById("email")
+var password = document.getElementById("password")
+var repPassword = document.getElementById("repPassword")
+
+// making a function for storing data
+window.signup = function(e){
+  e.preventDefault();
+  var obj = {
+    firstName:firstName.value,
+    lastName:lastName.value,
+    email:email.value,
+    password:password.value,
+    repPassword:repPassword.value
+  }
+  createUserWithEmailAndPassword(auth, obj.email, obj.password)
+  .then(function(success) {
+    alert('signup successfull')
+    window.location.replace('index.html')
+  })
+  .catch(function(error) {
+    alert('error' + error)
+  })
+  console.log(obj)
+};
 
