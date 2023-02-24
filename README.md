@@ -32,3 +32,5 @@ Still need TODO#
 Date: 2/24/2023
 
 auth state added -.> sign up with email/login working!
+
+product list -.> add a 'heart' for fav/wish list, change 'add to wishlist' to 'add to cart'
