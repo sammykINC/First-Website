@@ -31,4 +31,4 @@ Still need TODO#
 
 Date: 2/24/2023
 
-auth state added -.> work in progress#
+auth state added -.> sign up with email/login working!
