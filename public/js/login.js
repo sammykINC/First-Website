@@ -36,6 +36,7 @@ onAuthStateChanged(auth, (user) => {
   if (user != null) {
     const uid = user.uid;
     console.log('user has signed in');
+    window.location.replace('index.html')
   } else {
     console.log('No user');
   }

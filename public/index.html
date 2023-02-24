@@ -46,16 +46,20 @@ style="padding-left: 17px;">
     </ul>
   </div>
 
-  <form class="d-flex">
-    <button class="btn btn-light me-2" type="submit">
-      <i class="bi-cart-fill me-1"></i>
-      Cart
-      <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-    </button>
-  </form>
+  
   
   <div class="d-flex align-items-center">
-    <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
+    <div class="position-relative" style="margin-right: 15px">
+      <a href="#">
+        <img src="images/maybe.png" style="width: 22px" title="Shopping Cart">
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary">
+          1
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </a>
+    </div>
+
+    <!-- <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
       Login
     </button>
   
@@ -65,7 +69,23 @@ style="padding-left: 17px;">
 
     <button type="button" class="btn btn-danger me-2" href="#" id="logout">
       logout
+    </button> -->
+
+    <button type="button" class="btn btn-primary ms-3" href="#" id="login" style="padding: 0px 7px 0px 7px" title="Login" href="login.html" onclick="document.location.href='login.html'">
+      <img src="images/login_white.png" style="width: 20px; margin-bottom: 1px;">
+      Login
     </button>
+
+    <button type="button" class="btn btn-primary ms-3" href="#" id="signup" style="padding: 0px 7px 0px 7px" title="Signup" href="signup.html" onclick="document.location.href='signup.html'">
+      <img src="images/signup_white.png" style="width: 20px; margin-bottom: 1px;">
+      Signup
+    </button>
+
+    <button type="button" class="btn btn-danger ms-3" href="#" id="logout" style="padding: 0px 7px 0px 7px" title="Logout">
+      <img src="images/logout_white.png" style="width: 20px; margin-bottom: 1px;">
+      Logout
+    </button>
+    
   </div>
 </nav>
 <!-- Navigation-->
@@ -74,7 +94,7 @@ style="padding-left: 17px;">
 <header>
 <!-- Background image -->
   <div class="text-center bg-image" 
-  style=" background-image: url('https://i.imgur.com/vjmYzK8.png'); 
+  style=" background-image: url('images/main_overview/z9-header-back-2.png'); 
   height: 350px;">
 
     <div class="d-flex justify-content-center align-items-center h-100">
@@ -399,6 +419,7 @@ style="padding-left: 17px;">
 <div class="container px-4 px-lg-5 mt-4" id="hanging-icons">
   <h2 class="pb-2 border-bottom">About us</h2>
   <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+
     <div class="col d-flex align-items-start">
       <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
         <svg class="bi" width="1em" height="1em">
@@ -412,6 +433,7 @@ style="padding-left: 17px;">
         </p>
       </div>
     </div>
+
     <div class="col d-flex align-items-start">
       <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
         <svg class="bi" width="1em" height="1em">
@@ -425,6 +447,7 @@ style="padding-left: 17px;">
         </p>
       </div>
     </div>
+
     <div class="col d-flex align-items-start">
       <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
         <svg class="bi" width="1em" height="1em">
@@ -438,6 +461,7 @@ style="padding-left: 17px;">
         </p>
       </div>
     </div>
+
   </div>
 </div>
 <!-- End of Info -->
@@ -450,7 +474,7 @@ style="padding-left: 17px;">
 
     <div class="col">
       <div class="card card-cover overflow-hidden text-white bg-dark shadow-lg articlesSettings" style="
-      background-image: url('https://i.imgur.com/A8q6Bse.jpg');">
+      background-image: url('images/main_overview/fujifilm_shadow.png');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
           <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
             Fujifilm launches FUJIFILM X-T3
@@ -474,7 +498,7 @@ style="padding-left: 17px;">
 
     <div class="col">
       <div class="card card-cover overflow-hidden text-white bg-dark shadow-lg articlesSettings" style="
-      background-image: url('https://i.imgur.com/WCPr0Dc.jpg');">
+      background-image: url('images/main_overview/capture_shadow.png');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
           <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
             Capture the world with one 'click'
@@ -498,7 +522,7 @@ style="padding-left: 17px;">
 
     <div class="col">
       <div class="card card-cover overflow-hidden text-white bg-dark shadow-lg articlesSettings" style="
-      background-image: url('https://i.imgur.com/y0nolZa.jpg');">
+      background-image: url('images/main_overview/everyday_shadow.jpg');">
         <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
           <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
             Everyday 'must' have gadgets
@@ -629,7 +653,7 @@ style="padding-left: 17px;">
             <a href="#!" class="text-reset">Newsletter</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Account Settings</a>
+            <a href="resetPass.html" class="text-reset">Reset Password</a>
           </p>
           <p>
             <a href="#!" class="text-reset">Order History</a>
