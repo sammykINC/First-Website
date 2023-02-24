@@ -28,3 +28,7 @@ Still need TODO#
 3. add about us page -.> Random location/Contact info
 
 ?? Add Brands on main page ??
+
+Date: 2/24/2023
+
+auth state added -.> work in progress#
