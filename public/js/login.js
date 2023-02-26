@@ -1,15 +1,8 @@
-// const btn = document.querySelector("#login");
-// btn.addEventListener("click", () => {
-//  window.alert("You have successfully logged in!");
-// })
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-// import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { 
   getAuth, 
-  onAuthStateChanged, 
   signInWithEmailAndPassword,
   GoogleAuthProvider,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
@@ -26,28 +19,16 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
 
-// Auth state
-onAuthStateChanged(auth, (user) => {
-  if (user != null) {
-    const uid = user.uid;
-    console.log('user has signed in');
-    window.location.replace('index.html')
-  } else {
-    console.log('No user');
-  }
-});
-
-
 // LOGIN FORM
 
 // getting all the objecst of html
-var email = document.getElementById("email")
-var password = document.getElementById("password")
+
+var email = document.getElementById("txtEmail")
+var password = document.getElementById("txtPassword")
 
 window.login = function(e) {
  e.preventDefault();
@@ -57,11 +38,11 @@ window.login = function(e) {
  };
  signInWithEmailAndPassword(auth, obj.email, obj.password)
  .then(function(success) {
-  console.log(user.uid)
-  alert('logged in')
+  console.log(user.uid);
+  window.location.replace('index.html');
  })
  .catch(function(error) {
-   alert('login error' + error)
+   console.log('login error' + error);
  })
  console.log(obj)
 }

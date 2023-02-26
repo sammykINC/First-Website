@@ -54,19 +54,25 @@ function registration()
   {
     alert ('Password not Matched');
   }
-  else if(document.querySelector("repPassword").value.length < 6)
+  else if(repPassword.value.length < 6)
   {
     alert ('Password minimum length is 6');
   }
-  else if(document.querySelector("repPassword").value.length > 20)
+  else if(repPassword.value.length > 20)
   {
     alert ('Password max length is 20');
+  }
+  else if (firstName.value.length < 2) {
+    alert ('Please enter a valid name')
+  }
+  else if(firstName.value.length > 15) {
+    alert ('Please enter a valid name')
   }
   else
   {				                            
              alert('Thank You for Signing Up!');
-       // Redirecting to other page or webste code. 
-      //  window.location.replace = "https://sammyk-inc.web.app/index.html"; 
+      //  Redirecting to other page or webste code. 
+       window.location.replace = "index.html"; 
   }
 }
 function clearFunc()

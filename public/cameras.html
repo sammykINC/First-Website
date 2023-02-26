@@ -4,22 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products</title>
+  <title>Cameras</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css"> 
   <link rel="stylesheet" href="css/custom.css">
 </head>
-
-
 <body>
 
 <!-- Navigation-->
-<nav class="navbar navbar-expand-md navigation-clean-search sticky-top" 
-style="padding-left: 17px;">
+<nav class="navbar navbar-expand-md navigation-clean-search" style="padding-left: 17px;">
   <div class="container">
-    <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
-      <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="40px" class="me-1" >
-      <span class="logo__text">Pixelated</span> 
+    <!-- Left -->
+    <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white fs-4 fw-bold" >
+      <img src="images/logo/logo_5_white.png" alt="Bootstrap" width="35px" class="me-1">
+      <span class="logo__text"> Pixelated </span> 
     </a>
 
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
@@ -29,88 +27,234 @@ style="padding-left: 17px;">
 
   <div class="collapse navbar-collapse" id="navcol-1">
     <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link">
-        Homepage</a>
-      </li>
-      <li><a href="cameras.html" class="nav-link text-primary">
-        Cameras</a>
-      </li>
-      <li><a href="aboutUs.html" class="nav-link">
-        About Us</a>
-      </li>
-      <li><a href="contact.html" class="nav-link">
-        Contact</a>
-      </li>
+      <li><a href="index.html" class="nav-link"> Homepage </a></li>
+      <li><a href="cameras.html" class="nav-link text-danger"> Cameras </a></li>
+      <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
     </ul>
   </div>
 
-  
-  
-  <div class="d-flex align-items-center">
-    <div class="position-relative" style="margin-right: 15px">
+  <!-- Right -->
+  <div class="d-flex align-items-center" id="authView">
+    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
       <a href="#">
-        <img src="images/maybe.png" style="width: 25px" title="Shopping Cart">
-        <span class="position-absolute top-0 start-100 translate-middle badge bg-danger" style="
-        margin-top: 2px;
-        padding: 3px 6px;
-        border-radius: 20px">
-          1
-          <span class="visually-hidden">unread messages</span>
-        </span>
+        <img src="images/maybe.png" title="Shopping Cart">
+        <span class="badge bg-danger cartNotification"> 1 </span>
       </a>
     </div>
 
-    <!-- <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
-      Login
-    </button>
-  
-    <button type="button" class="btn btn-primary me-2" href="signup.html" onclick="document.location.href='signup.html'">
-      Sign up for free
-    </button>
+    <div class="position-relative" id="loggedInView">
+      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    </div>
 
-    <button type="button" class="btn btn-danger me-2" href="#" id="logout">
-      logout
-    </button> -->
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+    <img src="images/login_white.png"> Login </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="login" style="padding: 0px 7px 0px 7px" title="Login" href="login.html" onclick="document.location.href='login.html'">
-      <img src="images/login_white.png" style="width: 20px; margin-bottom: 1px;">
-      Login
-    </button>
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+    <img src="images/signup_white.png"> Signup </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="signup" style="padding: 0px 7px 0px 7px" title="Signup" href="signup.html" onclick="document.location.href='signup.html'">
-      <img src="images/signup_white.png" style="width: 20px; margin-bottom: 1px;">
-      Signup
-    </button>
-
-    <button type="button" class="btn btn-danger ms-3" href="#" id="logout" style="padding: 0px 7px 0px 7px" title="Logout">
-      <img src="images/logout_white.png" style="width: 20px; margin-bottom: 1px;">
-      Logout
-    </button>
-    
+    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+    <img src="images/logout_white.png"> Logout </button>
   </div>
 </nav>
 <!-- Navigation-->
 
-<!-- Product List -->
-<div class="container mt-5 mb-5">
-  <div class="d-flex justify-content-center row">
+<!-- SideBar -->
+<div class="flex-shrink-0 p-4 sideBar">
+
+  <a href="#" class="d-flex align-items-center link-dark text-decoration-none border-bottom">
+    <span> Filters </span>
+  </a>
+    
+  <ul class="list-unstyled ps-0">
+    <!-- One -->
+    <li class="mb-1 mt-2">
+      <span class="btn btn-toggle  align-items-center" data-bs-toggle="collapse" data-bs-target="#brand-collapse" aria-expanded="true">
+        <span class="filterTitles">Brand</span>
+      </span>
+
+      <div class="collapse show" id="brand-collapse">
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Canon (2) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> FUJIFILM (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Nikon (2) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Sony (2) </label>
+        </div>
+      </div>
+    </li>
+    <!-- Two -->
+    <li class="mb-1 mt-2">
+      <span class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#sensor-collapse" aria-expanded="false">
+        <span class="filterTitles"> Sensor Size </span>
+      </span>
+
+      <div class="collapse" id="sensor-collapse">
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> APS-C (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" value="" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Full Frame (2) </label>
+        </div>
+
+      </div>
+    </li>
+    <!-- Three -->
+    <li class="mb-1 mt-2">
+      <span class="btn btn-toggle  align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#resolution-collapse" aria-expanded="false">
+        <span class="filterTitles"> Resolution </span>
+      </span>
+
+      <div class="collapse" id="resolution-collapse">
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 12 MP (0) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 18 MP (0) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 24 MP (2) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 33 MP (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 45 MP (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 11.7 megapixels (0) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 26.1 megapixels (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 45.7 megapixels (2) </label>
+        </div>
+
+      </div>
+    </li>
+    <!-- Four -->
+    <li class="mb-1 mt-2">
+      <span class="btn btn-toggle  align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#videoRes-collapse" aria-expanded="false">
+        <span class="filterTitles"> Video Resolution </span>
+      </span>
+
+      <div class="collapse" id="videoRes-collapse">
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 4K Resolution (5) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> 8K Resolution (2) </label>
+        </div>
+
+      </div>
+    </li>
+    <!-- Five -->
+    <li class="mb-1 mt-2">
+      <span class="btn btn-toggle  align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#lensMount-collapse" aria-expanded="false">
+        <span class="filterTitles">Lens Mount</span>
+      </span>
+
+      <div class="collapse" id="lensMount-collapse">
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Nikon Z (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Sony E (3) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Nikon F (1) </label>
+        </div>
+
+        <div class="form-check formCheckDivider">
+          <input class="form-check-input filterCheckBox" type="checkbox" id="flexCheckDefault">
+          <label class="form-check-label" for="flexCheckDefault"> Canon RF (1) </label>
+        </div>
+
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- SideBar -->
+
+<!-- Main Content -->
+<div class="container border border-dark-subtle bg-secondary-subtle">
+
+  <div class="container" style="margin-bottom: -1px; margin-top: 30px">
+    <div class="d-flex justify-content-center row">
       <div class="col-md-10">
+        <div class="row p-2 bg-white border">
+          <p class="camerasListText">Cameras</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Product List -->
+<div class="container mb-5">
+  <div class="d-flex justify-content-center row">
+    <div class="col-md-10">
 
 <!-- First -->
-<div class="row p-2 bg-white border rounded mb-1">
+<div class="row p-2 bg-white border rounded-bottom mb-1">
+  
+  <span class="badge inStockBadge"> In Stock </span>
 
   <div class="col-md-3">
-    <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Nikon_Z9.avif">
+    <img class="img-fluid img-responsive product-image" src="images/cameras/Nikon_Z9.avif">
   </div>
 
   <div class="col-md-6 mt-1">
-    <h5>Nikon Z9 Body</h5>
+    <h5> Nikon Z9 Body </h5>
 
     <div class="d-flex flex-row">
-        <span>SKU: N34311</span>
+        <span> SKU: N34311 </span>
     </div>
     
-    <div class="mt-1 mb-2 spec-1"> 
+    <div class="spec-1 mt-2"> 
       <span>Sensor Resolution: 45.7 megapixels</span>
       <br>
       <span>Sensor: 35.9x23.9mm FX Full-Frame</span>
@@ -124,26 +268,28 @@ style="padding-left: 17px;">
       <span>Lens Mount: Nikon Z</span>
       <br>
     </div>
-
-    <div class="d-flex flex-row">
-      <span style="font-size: 12px">In Stock</span>
-    </div>
   </div>
 
   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesOne, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapOne">
+    </div>
+
     <div class="d-flex flex-row align-items-center">
         <h4 class="mr-1">$6,999.00</h4>
     </div>
+
     <h6 class="text-success">Free shipping</h6>
-    <div class="d-flex flex-column mt-4">
+    <div class="d-flex flex-column orderButtons">
 
-      <button class="btn btn-primary btn-sm" type="button" href="images/cameras/nikonZ9.html" onclick="document.location.href='nikonZ9.html'">
-        Details
-      </button>
+    <button class="btn btn-primary btn-sm" type="button" onclick="document.location.href='nikonZ9.html'">
+      Details
+    </button>
 
-      <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-        Add to wishlist
-      </button>
+    <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+      Add to Cart
+    </button>
 
     </div>
   </div>
@@ -153,9 +299,10 @@ style="padding-left: 17px;">
 
 <!-- Second -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge inStockBadge"> In Stock </span>
 
   <div class="col-md-3">
-    <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Sony_a7_IV.avif">
+    <img class="img-fluid img-responsive product-image" src="images/cameras/Sony_a7_IV.avif">
   </div>
 
   <div class="col-md-6 mt-1">
@@ -165,7 +312,7 @@ style="padding-left: 17px;">
         <span>SKU: ILCE7M4B</span>
     </div>
     
-    <div class="mt-1 mb-2 spec-1"> 
+    <div class="spec-1 mt-2"> 
       <span>Sensor Resolution: 33 megapixels</span>
       <br>
       <span>Sensor: Full-Frame CMOS</span>
@@ -179,38 +326,40 @@ style="padding-left: 17px;">
       <span>Lens Mount: Sony E</span>
       <br>
     </div>
-
-    <div class="d-flex flex-row">
-      <span style="font-size: 12px">In Stock</span>
-    </div>
   </div>
 
   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesTwo, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapTwo">
+    </div>
+    
     <div class="d-flex flex-row align-items-center">
         <h4 class="mr-1">$3,199.00</h4>
     </div>
     <h6 class="text-success">Free shipping</h6>
-    <div class="d-flex flex-column mt-4">
+    <div class="d-flex flex-column orderButtons">
 
-      <button class="btn btn-primary btn-sm" type="button"">
+      <button class="btn btn-primary btn-sm" type="button">
         Details
       </button>
 
       <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-        Add to wishlist
+        Add to Cart
       </button>
 
     </div>
   </div>
 
 </div>
-<!-- First List -->
+<!-- Second -->
 
-<!-- Second List -->
+<!-- Third -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge inStockBadge"> In Stock </span>
 
   <div class="col-md-3">
-    <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Nikon_D850.webp">
+    <img class="img-fluid img-responsive product-image" src="images/cameras/Nikon_D850.webp">
   </div>
 
   <div class="col-md-6 mt-1">
@@ -220,7 +369,7 @@ style="padding-left: 17px;">
         <span>SKU: N33722</span>
     </div>
     
-    <div class="mt-1 mb-2 spec-1"> 
+    <div class="spec-1 mt-2"> 
       <span>Resolution: 45.7 Megapixels</span>
       <br>
       <span>Sensor: CMOS</span>
@@ -234,30 +383,35 @@ style="padding-left: 17px;">
       <span>Lens Mount: Nikon F</span>
       <br>
     </div>
-
-    <div class="d-flex flex-row">
-      <span style="font-size: 12px">In Stock</span>
-    </div>
   </div>
 
   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesThree, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapThree">
+    </div>
     <div class="d-flex flex-row align-items-center">
         <h4 class="mr-1">$3,899.00</h4>
     </div>
     <h6 class="text-success">Free shipping</h6>
-    <div class="d-flex flex-column mt-4">
+    <div class="d-flex flex-column orderButtons">
+
       <button class="btn btn-primary btn-sm" type="button">
-        Details</button>
+        Details
+      </button>
+
       <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-        Add to wishlist</button>
+        Add to Cart
+      </button>
     </div>
   </div>
 
 </div>
-<!-- Second List -->
+<!-- Third -->
 
-<!-- Third List -->
+<!-- Fourth -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge inStockBadge">In Stock</span>
 
   <div class="col-md-3">
     <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Canon_EOS_R5.avif">
@@ -270,7 +424,7 @@ style="padding-left: 17px;">
         <span>SKU: 4147C002</span>
     </div>
     
-    <div class="mt-1 mb-2 spec-1"> 
+    <div class="spec-1 mt-2"> 
       <span>Sensor Resolution: 45 megapixels</span>
       <br>
       <span>Sensor: 35mm Full-Frame CMOS</span>
@@ -284,184 +438,205 @@ style="padding-left: 17px;">
       <span>Lens Mount: Canon RF</span>
       <br>
     </div>
-
-    <div class="d-flex flex-row">
-      <span style="font-size: 12px">In Stock</span>
-    </div>
   </div>
 
   <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesFour, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapFour">
+    </div>
     <div class="d-flex flex-row align-items-center">
         <h4 class="mr-1">$4,999.00</h4>
         <span class="text-decoration-line-through ms-1">$5,299.00</span>
     </div>
     <h6 class="text-success">Free shipping</h6>
-    <div class="d-flex flex-column mt-4">
+    <div class="d-flex flex-column orderButtons">
+
       <button class="btn btn-primary btn-sm" type="button">
-        Details</button>
+        Details
+      </button>
+
       <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-        Add to wishlist</button>
+        Add to Cart
+      </button>
     </div>
   </div>
 
 </div>
-<!-- Third List -->
+<!-- Fourth -->
 
-<!-- Fourth List -->
+<!-- Fifth -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge backOrderedBadge">Backordered</span>
 
   <div class="col-md-3">
     <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Fujifilm_X100V.webp">
   </div>
 
   <div class="col-md-6 mt-1">
-          <h5>FUJIFILM X100V</h5>
+    <h5>FUJIFILM X100V</h5>
 
-          <div class="d-flex flex-row">
-              <span>SKU: 600021578</span>
-          </div>
-          
-          <div class="mt-1 mb-2 spec-1"> 
-            <span>Sensor Resolution: 26.1 megapixels</span>
-            <br>
-            <span>Sensor: APS-C X-Transe CMOS IV</span>
-            <br>
-            <span>Video Resolution: 4K</span>
-            <br>
-            <span>Focal Length: 23mm</span>
-            <br>
-            <span>Auto Focus Points: 117 areas</span>
-            <br>
-            <span>Lens Construction: 8 elements in 6 groups</span>
-            <br>
-          </div>
+    <div class="d-flex flex-row">
+        <span>SKU: 600021578</span>
+    </div>
+    
+    <div class="spec-1 mt-2"> 
+      <span>Sensor Resolution: 26.1 megapixels</span>
+      <br>
+      <span>Sensor: APS-C X-Transe CMOS IV</span>
+      <br>
+      <span>Video Resolution: 4K</span>
+      <br>
+      <span>Focal Length: 23mm</span>
+      <br>
+      <span>Auto Focus Points: 117 areas</span>
+      <br>
+      <span>Lens Construction: 8 elements in 6 groups</span>
+      <br>
+    </div>
+  </div>
 
-          <div class="d-flex flex-row">
-            <span style="font-size: 12px">Backordered</span>
-          </div>
+  <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesFive, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapFive">
+    </div>
+      <div class="d-flex flex-row align-items-center">
+          <h4 class="mr-1">$1,774.99</h4>
       </div>
+      <h6 class="text-success">Free shipping</h6>
+      <div class="d-flex flex-column orderButtons">
 
-      <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-          <div class="d-flex flex-row align-items-center">
-              <h4 class="mr-1">$1,774.99</h4>
-          </div>
-          <h6 class="text-success">Free shipping</h6>
-          <div class="d-flex flex-column mt-4">
-            <button class="btn btn-primary btn-sm" type="button">
-              Details</button>
-            <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-              Add to wishlist</button>
-          </div>
+        <button class="btn btn-primary btn-sm" type="button">
+          Details
+        </button>
+
+        <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+          Add to Cart
+        </button>
       </div>
+  </div>
 
   </div>
-<!-- Fourth List -->
+<!-- Fifth -->
 
-<!-- Fifth List -->
+<!-- Sixth -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge inStockBadge" style="width: auto; height: fit-content">In Stock</span>
 
   <div class="col-md-3">
     <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Sony_a7_III.avif">
   </div>
 
   <div class="col-md-6 mt-1">
-          <h5>Sony a7 III Mirrorless Body</h5>
+    <h5>Sony a7 III Mirrorless Body</h5>
 
-          <div class="d-flex flex-row">
-              <span>SKU: ILCE7M3B</span>
-          </div>
-          
-          <div class="mt-1 mb-2 spec-1"> 
-            <span>Sensor Resolution: 24 megapixels</span>
-            <br>
-            <span>Sensor: Full frame BSI CMOS</span>
-            <br>
-            <span>Video Resolution: 4K</span>
-            <br>
-            <span>Continuous Shooting Speed: 10fps</span>
-            <br>
-            <span>Auto Focus Points: 693</span>
-            <br>
-            <span>Lens Mount: Sony E</span>
-            <br>
-          </div>
+    <div class="d-flex flex-row">
+        <span>SKU: ILCE7M3B</span>
+    </div>
+    
+    <div class="spec-1 mt-2"> 
+      <span>Sensor Resolution: 24 megapixels</span>
+      <br>
+      <span>Sensor: Full frame BSI CMOS</span>
+      <br>
+      <span>Video Resolution: 4K</span>
+      <br>
+      <span>Continuous Shooting Speed: 10fps</span>
+      <br>
+      <span>Auto Focus Points: 693</span>
+      <br>
+      <span>Lens Mount: Sony E</span>
+      <br>
+    </div>
+  </div>
 
-          <div class="d-flex flex-row">
-            <span style="font-size: 12px">In Stock</span>
-          </div>
+  <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesSix, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapSix">
+    </div>
+      <div class="d-flex flex-row align-items-center">
+          <h4 class="mr-1">$3,899.00</h4>
       </div>
+      <h6 class="text-success">Free shipping</h6>
+      <div class="d-flex flex-column orderButtons">
 
-      <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-          <div class="d-flex flex-row align-items-center">
-              <h4 class="mr-1">$3,899.00</h4>
-          </div>
-          <h6 class="text-success">Free shipping</h6>
-          <div class="d-flex flex-column mt-4">
-            <button class="btn btn-primary btn-sm" type="button">
-              Details</button>
-            <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-              Add to wishlist</button>
-          </div>
+        <button class="btn btn-primary btn-sm" type="button">
+          Details
+        </button>
+
+        <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+          Add to Cart
+        </button>
       </div>
+  </div>
 
   </div>
-<!-- Fifth List -->
+<!-- Sixth -->
 
-<!-- Sixth List -->
+<!-- Seventh -->
 <div class="row p-2 bg-white border rounded mb-1">
+  <span class="badge onOrderBadge" style="width: auto; height: fit-content">On Order</span>
 
   <div class="col-md-3">
     <img class="img-fluid img-responsive rounded product-image" src="images/cameras/Canon_EOS_5D_Mark_IV.avif">
   </div>
 
   <div class="col-md-6 mt-1">
-          <h5>Canon EOS 5D Mark IV Body</h5>
+    <h5>Canon EOS 5D Mark IV Body</h5>
 
-          <div class="d-flex flex-row">
-              <span>SKU: 1483C003</span>
-          </div>
-          
-          <div class="mt-1 mb-2 spec-1"> 
-            <span>Sensor Resolution: 24 megapixels</span>
-            <br>
-            <span>Sensor: Full frame BSI CMOS</span>
-            <br>
-            <span>Video Resolution: 4K</span>
-            <br>
-            <span>Continuous Shooting Speed: 10fps</span>
-            <br>
-            <span>Auto Focus Points: 693</span>
-            <br>
-            <span>Lens Mount: Sony E</span>
-            <br>
-          </div>
+    <div class="d-flex flex-row">
+        <span>SKU: 1483C003</span>
+    </div>
+    
+    <div class="spec-1 mt-2"> 
+      <span>Sensor Resolution: 24 megapixels</span>
+      <br>
+      <span>Sensor: Full frame BSI CMOS</span>
+      <br>
+      <span>Video Resolution: 4K</span>
+      <br>
+      <span>Continuous Shooting Speed: 10fps</span>
+      <br>
+      <span>Auto Focus Points: 693</span>
+      <br>
+      <span>Lens Mount: Sony E</span>
+      <br>
+    </div>
+  </div>
 
-          <div class="d-flex flex-row">
-            <span style="font-size: 12px">On Order</span>
-          </div>
+  <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+    <div class="favIcon">
+      <img class="favBadge responsive" onclick="setTimer = setTimeout(swapImagesSeven, 50)" value="Swap Image"
+      src="images/cameras/fav_icon.png" id="imageSwapSeven">
+    </div>
+      <div class="d-flex flex-row align-items-center">
+          <h4 class="mr-1">3,099.00</h4>
+          <span class="text-decoration-line-through ms-1">$3,299.00</span>
       </div>
+      <h6 class="text-success">Free shipping</h6>
+      <div class="d-flex flex-column orderButtons">
 
-      <div class="align-items-center align-content-center col-md-3 border-left mt-1">
-          <div class="d-flex flex-row align-items-center">
-              <h4 class="mr-1">3,099.00</h4>
-              <span class="text-decoration-line-through ms-1">$3,299.00</span>
-          </div>
-          <h6 class="text-success">Free shipping</h6>
-          <div class="d-flex flex-column mt-4">
-            <button class="btn btn-primary btn-sm" type="button">
-              Details</button>
-            <button class="btn btn-outline-primary btn-sm mt-2" type="button">
-              Add to wishlist</button>
-          </div>
+        <button class="btn btn-primary btn-sm" type="button">
+          Details
+        </button>
+
+        <button class="btn btn-outline-primary btn-sm mt-2" type="button">
+          Add to Cart
+        </button>
       </div>
+  </div>
 
   </div>
-<!-- Sixth List -->
+<!-- Seventh -->
 
-      </div>
+    </div>
   </div>
 </div>
 <!-- Product List -->
+</div>
+<!-- Main Content -->
 
 <!-- Footer -->
 <footer class="bg-black text-center py-4">
@@ -478,8 +653,12 @@ style="padding-left: 17px;">
   </footer>
 <!-- Footer -->
 
-
-    <!--          Bootstrap prijungimas           -->
+<!--          Bootstrap prijungimas           -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<!--          Bootstrap prijungimas           -->
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/logout.js"></script>
+<script src="js/fav.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

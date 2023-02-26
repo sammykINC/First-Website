@@ -9,18 +9,16 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/nikonZ9.css">
-
 </head>
 
-
 <body>
-
 <!-- Navigation-->
 <nav class="navbar navbar-expand-md navigation-clean-search sticky-top" 
 style="padding-left: 17px;">
   <div class="container">
+    <!-- Left -->
     <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
-      <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="40px" class="me-1" >
+      <img src="images/logo/logo_5_white.png" alt="Bootstrap" width="35px" class="me-1" >
       <span class="logo__text">Pixelated</span> 
     </a>
 
@@ -31,64 +29,34 @@ style="padding-left: 17px;">
 
   <div class="collapse navbar-collapse" id="navcol-1">
     <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link">
-        Homepage</a>
-      </li>
-      <li><a href="cameras.html" class="nav-link text-primary">
-        Cameras</a>
-      </li>
-      <li><a href="aboutUs.html" class="nav-link">
-        About Us</a>
-      </li>
-      <li><a href="contact.html" class="nav-link">
-        Contact</a>
-      </li>
+      <li><a href="index.html" class="nav-link"> Homepage </a></li>
+      <li><a href="cameras.html" class="nav-link text-danger"> Cameras </a></li>
+      <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
     </ul>
   </div>
 
-  
-  
-  <div class="d-flex align-items-center">
-    <div class="position-relative" style="margin-right: 15px">
+  <!-- Right -->
+  <div class="d-flex align-items-center" id="authView">
+    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
       <a href="#">
-        <img src="images/maybe.png" style="width: 25px" title="Shopping Cart">
-        <span class="position-absolute top-0 start-100 translate-middle badge bg-danger" style="
-        margin-top: 2px;
-        padding: 3px 6px;
-        border-radius: 20px">
-          1
-          <span class="visually-hidden">unread messages</span>
-        </span>
+        <img src="images/maybe.png" title="Shopping Cart">
+        <span class="badge bg-danger cartNotification"> 1 </span>
       </a>
     </div>
 
-    <!-- <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
-      Login
-    </button>
-  
-    <button type="button" class="btn btn-primary me-2" href="signup.html" onclick="document.location.href='signup.html'">
-      Sign up for free
-    </button>
+    <div class="position-relative" id="loggedInView">
+      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    </div>
 
-    <button type="button" class="btn btn-danger me-2" href="#" id="logout">
-      logout
-    </button> -->
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+    <img src="images/login_white.png"> Login </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="login" style="padding: 0px 7px 0px 7px" title="Login" href="login.html" onclick="document.location.href='login.html'">
-      <img src="images/login_white.png" style="width: 20px; margin-bottom: 1px;">
-      Login
-    </button>
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+    <img src="images/signup_white.png"> Signup </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="signup" style="padding: 0px 7px 0px 7px" title="Signup" href="signup.html" onclick="document.location.href='signup.html'">
-      <img src="images/signup_white.png" style="width: 20px; margin-bottom: 1px;">
-      Signup
-    </button>
-
-    <button type="button" class="btn btn-danger ms-3" href="#" id="logout" style="padding: 0px 7px 0px 7px" title="Logout">
-      <img src="images/logout_white.png" style="width: 20px; margin-bottom: 1px;">
-      Logout
-    </button>
-    
+    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+    <img src="images/logout_white.png"> Logout </button>
   </div>
 </nav>
 <!-- Navigation-->
@@ -97,27 +65,26 @@ style="padding-left: 17px;">
 <!-- Product Information -->
 <div class="container border border-dark-subtle">
   <div class="single_product">
-      <div class="container-fluid" style="background-color: #fff; padding: 11px;">
-          <div class="row">
+    <div class="container-fluid" style="background-color: #fff; padding: 11px;">
+      <div class="row">
 
-              <div class="col-lg-2 order-lg-1 order-2">
-                  <ul class="image_list">
-
-                      <li data-image="images/cameras/Nikon-Z9_ProductF.jpg">
-                        <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%"></li>
+        <div class="col-lg-2 order-lg-1 order-2">
+          <ul class="image_list">
+            <li data-image="images/cameras/Nikon-Z9_ProductF.jpg">
+              <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%">
+            </li>
             
+            <li data-image="images/cameras/Nikon-Z9_ProductB.jpg" class="object">
+              <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%;">
+            <li>         
+          </ul>
+        </div>
 
-                      <li data-image="images/cameras/Nikon-Z9_ProductB.jpg" class="object">
-                        <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%;"></li>
-                        
-                  </ul>
-              </div>
-
-              <div class="col-lg-4 order-lg-2 order-1 ">
-                <div class="image_selected p-3">
-                    <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 120px">
-                </div>
-              </div>
+        <div class="col-lg-4 order-lg-2 order-1 ">
+          <div class="image_selected p-3">
+              <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 120px">
+          </div>
+        </div>
               
 <!-- Product Description -->
   <div class="col-lg-6 order-3">
@@ -126,7 +93,7 @@ style="padding-left: 17px;">
   <nav>
     <ol class="breadcrumb mb-3" style="height: 20px;">
       <li class="breadcrumb-item"><a href="index.html">Homepage</a></li>
-      <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+      <li class="breadcrumb-item"><a href="cameras.html">Cameras</a></li>
       <li class="breadcrumb-item active">Details</li>
     </ol>
   </nav>
@@ -134,49 +101,29 @@ style="padding-left: 17px;">
   <div class="product_name">Nikon Z 9 Body</div>
 
   <div> 
-      <span class="product_price mb-2">
-      $6,999.00
-      </span>
+    <span class="product_price mb-2">
+    $6,999.00
+    </span>
   </div>
-
-      <hr class="singleline mt-0 pb-0">
+    <hr class="singleline mt-0 pb-0">
   <div> 
-      <span class="product_info">
-          Resolution: 45.7 megapixels<span><br> 
-      <span class="product_info">
-          Sensor: 35.9x23.9mm FX Full-Frame<span><br> 
-      <span class="product_info">
-          Video Resolution: 8K<span><br> 
-      <span class="product_info">
-          Continuous Shooting Speed: 20fps<span><br> 
-      <span class="product_info">
-          Lens Mount: Nikon Z<span> 
-      <span class="product_info">
-          Shutter Speed: 30sec - 1/32,000sec<span> 
-      <span class="product_info">
-          ISO Sensitivity: (32) 64 - 25,600 (102,400)<span> 
-      <span class="product_info">
-          Screen Size: 3.2"<span> 
-      <span class="product_info">
-          Recording Media: CFexpress Type B, XQD<span> 
-      <span class="product_info">
-          Frame Rate: 120fps (1080p), 30p (8K)<span> 
-      <span class="product_info">
-          Audio Inputs: 3.5mm stereo minijack<span> 
-      <span class="product_info">
-          Power Source: EN-EL18D, EN-EL18a/b/c<span> 
-      <span class="product_info">
-          GPS: Yes<span> 
-      <span class="product_info">
-          Weatherproof: Weather resistant<span> 
-      <span class="product_info">
-          Dimensions: 14.9x14.9x9.0cm<span> 
-      <span class="product_info">
-          Weight: 1.16kg<span> 
+      <span class="product_info"> Resolution: 45.7 megapixels <span><br> 
+      <span class="product_info"> Sensor: 35.9x23.9mm FX Full-Frame <span><br> 
+      <span class="product_info"> Video Resolution: 8K <span><br> 
+      <span class="product_info"> Continuous Shooting Speed: 20fps <span><br> 
+      <span class="product_info"> Lens Mount: Nikon Z <span> 
+      <span class="product_info"> Shutter Speed: 30sec - 1/32,000sec <span> 
+      <span class="product_info"> ISO Sensitivity: (32) 64 - 25,600 (102,400) <span> 
+      <span class="product_info"> Screen Size: 3.2" <span> 
+      <span class="product_info"> Recording Media: CFexpress Type B, XQD <span> 
+      <span class="product_info"> Frame Rate: 120fps (1080p), 30p (8K) <span> 
+      <span class="product_info"> Audio Inputs: 3.5mm stereo minijack <span> 
+      <span class="product_info"> Power Source: EN-EL18D, EN-EL18a/b/c <span> 
+      <span class="product_info"> GPS: Yes <span> 
+      <span class="product_info"> Weatherproof: Weather resistant <span> 
+      <span class="product_info"> Dimensions: 14.9x14.9x9.0cm <span> 
+      <span class="product_info"> Weight: 1.16kg <span> 
   </div>
-
-    
-
 
   <hr class="singleline">
   <div class="order_info d-flex flex-row">
@@ -185,16 +132,6 @@ style="padding-left: 17px;">
 
   <div class="row">
       <div class="col-xs-6"> 
-
-        <!-- plus minus button -->
-
-        <!-- <div class="input-group">
-          <input type="button" value="-" class="button-minus" data-field="quantity">
-          <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
-          <input type="button" value="+" class="button-plus" data-field="quantity">
-        </div> -->
-
-        <!-- plus minus button -->
 
         <button type="button" class="btn btn-primary shop-button">
           Add to Cart
@@ -218,7 +155,7 @@ style="padding-left: 17px;">
 
 <div class="container">
   <!--          1           -->
-  <div class="card text-center" style="width: max-content"> <!-- Start -->
+  <div class="card text-center" style="width: max-content">
     <div class="card-header fw-medium fs-30 bg-primary-subtle">
       Buy Together and Save
     </div>
@@ -251,11 +188,11 @@ style="padding-left: 17px;">
       <span class="afterDiscount fw-medium">$8,498.00</span>
     </div>
 
-  </div> <!-- end -->
+  </div>
   <!--          1           -->
 
   <!--          2           -->
-  <div class="card text-center" style="width: max-content"> <!-- Start -->
+  <div class="card text-center" style="width: max-content">
     <div class="card-header fw-medium fs-30 bg-primary-subtle">
       Buy Together and Save
     </div>
@@ -287,7 +224,7 @@ style="padding-left: 17px;">
     <span class="beforeDiscount fw-medium">$7,328.00</span>
     <span class="afterDiscount fw-medium">$7,198.00</span>
   </div>
-  </div> <!-- end -->
+  </div>
   <!--          2           -->
 </div>
 
@@ -418,12 +355,6 @@ style="padding-left: 17px;">
 </div>
 <!-- Description -->
 
-
-
-
-
-
-
       </div>
   </div>
 </div>
@@ -450,5 +381,8 @@ style="padding-left: 17px;">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!--          Bootstrap prijungimas           -->
 <script src="js/nikonZ9.js"></script>
+<script src="js/index.js"></script>
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/logout.js"></script>
 </body>
 </html>

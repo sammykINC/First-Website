@@ -14,13 +14,13 @@
 </head>
 
 <body>
-
 <!-- Navigation-->
 <nav class="navbar navbar-expand-md navigation-clean-search sticky-top" 
 style="padding-left: 17px;">
   <div class="container">
+    <!-- Left -->
     <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
-      <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="40px" class="me-1" >
+      <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="35px" class="me-1" >
       <span class="logo__text">Pixelated</span> 
     </a>
 
@@ -31,64 +31,34 @@ style="padding-left: 17px;">
 
   <div class="collapse navbar-collapse" id="navcol-1">
     <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link text-primary">
-        Homepage</a>
-      </li>
-      <li><a href="cameras.html" class="nav-link">
-        Cameras</a>
-      </li>
-      <li><a href="aboutUs.html" class="nav-link">
-        About Us</a>
-      </li>
-      <li><a href="contact.html" class="nav-link">
-        Contact</a>
-      </li>
+      <li><a href="index.html" class="nav-link"> Homepage </a></li>
+      <li><a href="cameras.html" class="nav-link"> Cameras </a></li>
+      <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
     </ul>
   </div>
 
-  
-  
-  <div class="d-flex align-items-center">
-    <div class="position-relative" style="margin-right: 15px">
+  <!-- Right -->
+  <div class="d-flex align-items-center" id="authView">
+    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
       <a href="#">
-        <img src="images/maybe.png" style="width: 25px" title="Shopping Cart">
-        <span class="position-absolute top-0 start-100 translate-middle badge bg-danger" style="
-        margin-top: 2px;
-        padding: 3px 6px;
-        border-radius: 20px">
-          1
-          <span class="visually-hidden">unread messages</span>
-        </span>
+        <img src="images/maybe.png" title="Shopping Cart">
+        <span class="badge bg-danger cartNotification"> 1 </span>
       </a>
     </div>
 
-    <!-- <button type="button" class="btn btn-outline-light me-2" href="login.html" onclick="document.location.href='login.html'">
-      Login
-    </button>
-  
-    <button type="button" class="btn btn-primary me-2" href="signup.html" onclick="document.location.href='signup.html'">
-      Sign up for free
-    </button>
+    <div class="position-relative" id="loggedInView">
+      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    </div>
 
-    <button type="button" class="btn btn-danger me-2" href="#" id="logout">
-      logout
-    </button> -->
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+    <img src="images/login_white.png"> Login </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="login" style="padding: 0px 7px 0px 7px" title="Login" href="login.html" onclick="document.location.href='login.html'">
-      <img src="images/login_white.png" style="width: 20px; margin-bottom: 1px;">
-      Login
-    </button>
+    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+    <img src="images/signup_white.png"> Signup </button>
 
-    <button type="button" class="btn btn-primary ms-3" href="#" id="signup" style="padding: 0px 7px 0px 7px" title="Signup" href="signup.html" onclick="document.location.href='signup.html'">
-      <img src="images/signup_white.png" style="width: 20px; margin-bottom: 1px;">
-      Signup
-    </button>
-
-    <button type="button" class="btn btn-danger ms-3" href="#" id="logout" style="padding: 0px 7px 0px 7px" title="Logout">
-      <img src="images/logout_white.png" style="width: 20px; margin-bottom: 1px;">
-      Logout
-    </button>
-    
+    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+    <img src="images/logout_white.png"> Logout </button>
   </div>
 </nav>
 <!-- Navigation-->
