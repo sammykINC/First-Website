@@ -39,9 +39,9 @@ style="padding-left: 17px;">
   <!-- Right -->
   <div class="d-flex align-items-center" id="authView">
     <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
-      <a href="#">
+      <a href="shoppingCart.html">
         <img src="images/maybe.png" title="Shopping Cart">
-        <span class="badge bg-danger cartNotification"> 1 </span>
+        <span class="badge bg-danger cartNotification"> 3 </span>
       </a>
     </div>
 
@@ -63,26 +63,26 @@ style="padding-left: 17px;">
 
 
 <!-- Product Information -->
-<div class="container border border-dark-subtle">
+<div class="container border border-dark-subtle bg-secondary-subtle">
   <div class="single_product">
-    <div class="container-fluid" style="background-color: #fff; padding: 11px;">
+    <div class="container-fluid" style=" padding: 11px;">
       <div class="row">
 
         <div class="col-lg-2 order-lg-1 order-2">
           <ul class="image_list">
-            <li data-image="images/cameras/Nikon-Z9_ProductF.jpg">
+            <li data-image="images/cameras/Nikon-Z9_ProductF.jpg" style="background-color: white">
               <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%">
             </li>
             
-            <li data-image="images/cameras/Nikon-Z9_ProductB.jpg" class="object">
+            <li data-image="images/cameras/Nikon-Z9_ProductB.jpg"  style="background-color: white">
               <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%;">
             <li>         
           </ul>
         </div>
 
         <div class="col-lg-4 order-lg-2 order-1 ">
-          <div class="image_selected p-3">
-              <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 120px">
+          <div class="image_selected p-3" style="background-color: white">
+              <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 110px">
           </div>
         </div>
               
@@ -133,11 +133,11 @@ style="padding-left: 17px;">
   <div class="row">
       <div class="col-xs-6"> 
 
-        <button type="button" class="btn btn-primary shop-button">
+        <button type="button" class="btn btn-primary shop-button" onclick="document.location.href='shoppingCart.html'">
           Add to Cart
         </button> 
 
-        <button type="button" class="btn btn-success shop-button">
+        <button type="button" class="btn btn-success shop-button" onclick="document.location.href='checkout.html'">
           Buy Now
         </button>
 

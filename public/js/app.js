@@ -39,8 +39,8 @@ onAuthStateChanged(auth, (user) => {
 // Registration form
 var firstName = document.getElementById("firstName")
 var lastName = document.getElementById("lastName")
-var email = document.getElementById("txtEmail")
-var password = document.getElementById("txtPassword")
+var email = document.getElementById("email")
+var password = document.getElementById("password")
 var repPassword = document.getElementById("repPassword")
 
 window.signup = function(e){

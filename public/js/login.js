@@ -27,8 +27,8 @@ const auth = getAuth(app);
 
 // getting all the objecst of html
 
-var email = document.getElementById("txtEmail")
-var password = document.getElementById("txtPassword")
+var email = document.getElementById("email")
+var password = document.getElementById("password")
 
 window.login = function(e) {
  e.preventDefault();
@@ -38,8 +38,8 @@ window.login = function(e) {
  };
  signInWithEmailAndPassword(auth, obj.email, obj.password)
  .then(function(success) {
-  console.log(user.uid);
   window.location.replace('index.html');
+  console.log(user.uid);
  })
  .catch(function(error) {
    console.log('login error' + error);
