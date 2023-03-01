@@ -2,17 +2,17 @@
 function registration()
 {
 
-  var firstName = document.querySelector("firstName").value;
-  var lastName = document.querySelector("lastName").value;
-  var email = document.querySelector("email").value;
-  var password = document.querySelector("password").value;			
-  var repPassword = document.querySelector("repPassword").value;
+  const firstName = document.querySelector("firstName").value;
+  const lastName = document.querySelector("lastName").value;
+  const email = document.querySelector("email").value;
+  const password = document.querySelector("password").value;			
+  const repPassword = document.querySelector("repPassword").value;
 
   
       //email id expression code
-  var password_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
-  var letters = /^[A-Za-z]+$/;
-  var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  const password_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+  const letters = /^[A-Za-z]+$/;
+  const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
   if(firstName=='')
   {

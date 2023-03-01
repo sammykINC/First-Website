@@ -1,0 +1,83 @@
+.product-image{
+ width: 100%;
+}
+
+.spec-1{
+ color: #938787;
+ font-size: 15px;
+}
+
+.inStockBadge {
+ background-color: rgb(22, 138, 22);
+ position: absolute;
+ width: auto; 
+ height: fit-content
+}
+
+.backOrderedBadge {
+ position: absolute;
+ background-color: #777;
+ width: auto; 
+ height: fit-content;
+}
+
+.onOrderBadge {
+ position: absolute;
+ background-color: rgb(212, 176, 14);
+ width: auto; 
+ height: fit-content;
+}
+
+.orderButtons {
+ margin-top: 85px;
+}
+
+.favIcon {
+ display: flex;
+ justify-content: flex-end;
+}
+
+.favBadge {
+ position: absolute;
+ margin-top: 4px;
+ height: auto;
+ width: auto;
+}
+
+.favBadge:hover {
+ cursor: pointer;
+}
+
+.filterNav {
+border: solid 1px rgb(222, 226, 230);
+background-color: white;
+}
+
+.filterList {
+ padding: 0 0 20px 70px;
+}
+
+.formCheckDivider {
+ margin-left: 15px;
+}
+
+.filterCheckBox:hover{
+ cursor: pointer;
+}
+
+.filterTitles {
+ font-weight: 700;
+ color: #dc3545;
+}
+
+.btn-toggle {
+ background-color: none;
+ border-style: none;
+}
+
+.camerasListText{
+ font-size: 28px;
+ font-weight: 700;
+ color: #222;
+ margin: 0;
+}

@@ -7,82 +7,129 @@
   <title>Nikon Z9</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/general.css">
   <link rel="stylesheet" href="css/nikonZ9.css">
 </head>
 
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-md navigation-clean-search sticky-top" 
+<nav class="navbar navbar-expand-md navigation-clean-search" 
 style="padding-left: 17px;">
   <div class="container">
     <!-- Left -->
     <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
-      <img src="images/logo/logo_5_white.png" alt="Bootstrap" width="35px" class="me-1" >
+      <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="35px" class="me-1" >
       <span class="logo__text">Pixelated</span> 
     </a>
 
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="collapse navbar-collapse navbarHrefs" id="navcol-1">
+      <ul class="nav justify-content-left mb-md-0">
+        <li><a href="index.html" class="nav-link"> Homepage </a></li>
+        <li><a href="cameras.html" class="nav-link text-danger"> Cameras</a></li>
+        <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+        <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+      </ul>
+    </div>
+  
+    <!-- Right -->
+    <div class="d-flex align-items-center" id="authView">
+      <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
+        <a href="shoppingCart.html">
+          <img src="images/maybe.png" title="Shopping Cart">
+          <span class="badge bg-danger cartNotification"> 3 </span>
+        </a>
+      </div>
 
-  <div class="collapse navbar-collapse" id="navcol-1">
-    <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link"> Homepage </a></li>
-      <li><a href="cameras.html" class="nav-link text-danger"> Cameras </a></li>
-      <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
-      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
-    </ul>
-  </div>
+      <div class="position-relative" id="loggedInView">
+        <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+      </div>
 
-  <!-- Right -->
-  <div class="d-flex align-items-center" id="authView">
-    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
-      <a href="shoppingCart.html">
-        <img src="images/maybe.png" title="Shopping Cart">
-        <span class="badge bg-danger cartNotification"> 3 </span>
-      </a>
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+      <img src="images/login_white.png"> Login </button>
+
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+      <img src="images/signup_white.png"> Signup </button>
+
+      <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+      <img src="images/logout_white.png"> Logout </button>
     </div>
 
-    <div class="position-relative" id="loggedInView">
-      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    <!-- expandable navbar -->
+  <nav class="mobileNav">
+    <div class="container-fluid">
+      <img class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" src="images/navbarMenu_less.png" width="45px">
+        <!-- <span class="navbar-toggler-icon"></span> -->
     </div>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
-    <img src="images/login_white.png"> Login </button>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
-    <img src="images/signup_white.png"> Signup </button>
-
-    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
-    <img src="images/logout_white.png"> Logout </button>
+  </nav>
+    <div class="collapse mobileNavHrefs" id="navbarToggleExternalContent">
+      <div style="margin-right: -12px">
+          <ul class="nav">
+            <li><a href="index.html" class="nav-link text-danger"> Homepage </a></li>
+            <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
+            <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+            <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+          </ul>
+      </div>
+    </div>
+    
+    <!-- expandable navbar -->
   </div>
 </nav>
 <!-- Navigation-->
 
 
 <!-- Product Information -->
-<div class="container border border-dark-subtle bg-secondary-subtle">
+<div class="container main__content">
   <div class="single_product">
     <div class="container-fluid" style=" padding: 11px;">
+
       <div class="row">
 
-        <div class="col-lg-2 order-lg-1 order-2">
+        <div class="col-lg-2 order-lg-1 order-2 cameraPreviewImages">
           <ul class="image_list">
-            <li data-image="images/cameras/Nikon-Z9_ProductF.jpg" style="background-color: white">
+            <!-- Front -->
+            <li class="cameraFrontLi" data-image="images/cameras/Nikon-Z9_ProductF.jpg "data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: white">
               <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%">
             </li>
-            
-            <li data-image="images/cameras/Nikon-Z9_ProductB.jpg"  style="background-color: white">
-              <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%;">
-            <li>         
+
+            <div class="modal fade imageModal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-secondary-subtle">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Nikon Z9 Body Front</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body d-flex justify-content-center">
+                    <img src="images/cameras/Nikon-Z9_ProductF.jpg" alt="" width="450px">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Back -->
+            <li class="cameraBackLi" data-image="images/cameras/Nikon-Z9_ProductB.jpg "data-bs-toggle="modal" data-bs-target="#exampleModal2" style="background-color: white">
+              <img src="images/cameras/Nikon-Z9_ProductB.jpg" style="width:100%">
+            </li>
+
+            <div class="modal fade imageModal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header bg-secondary-subtle">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel2">Nikon Z9 Body Front</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body d-flex justify-content-center">
+                    <img src="images/cameras/Nikon-Z9_ProductB.jpg" alt="" width="450px">
+                  </div>
+                </div>
+              </div>
+            </div>  
+              
           </ul>
         </div>
 
-        <div class="col-lg-4 order-lg-2 order-1 ">
+        <div class="col-lg-4 order-lg-2 order-1 mainCamera">
           <div class="image_selected p-3" style="background-color: white">
-              <img src="images/cameras/Nikon-Z9_ProductF.jpg" style="width:100%; padding-bottom: 110px">
+              <img src="images/cameras/Nikon_Z9.avif" style="width:100%; padding-bottom: 110px">
           </div>
         </div>
               
@@ -101,12 +148,12 @@ style="padding-left: 17px;">
   <div class="product_name">Nikon Z 9 Body</div>
 
   <div> 
-    <span class="product_price mb-2">
+    <span class="product_price">
     $6,999.00
     </span>
   </div>
-    <hr class="singleline mt-0 pb-0">
-  <div> 
+ 
+  <div class="mt-4 mb-3"> 
       <span class="product_info"> Resolution: 45.7 megapixels <span><br> 
       <span class="product_info"> Sensor: 35.9x23.9mm FX Full-Frame <span><br> 
       <span class="product_info"> Video Resolution: 8K <span><br> 
@@ -125,68 +172,61 @@ style="padding-left: 17px;">
       <span class="product_info"> Weight: 1.16kg <span> 
   </div>
 
-  <hr class="singleline">
-  <div class="order_info d-flex flex-row">
-    <form action="#">
-  </div>
+  <div class="row detailContBtn">
+    <div class="col-xs-6"> 
+      <button type="button" class="btn btn-success" onclick="document.location.href='shoppingCart.html'">
+        Add to Cart
+      </button> 
 
-  <div class="row">
-      <div class="col-xs-6"> 
-
-        <button type="button" class="btn btn-primary shop-button" onclick="document.location.href='shoppingCart.html'">
-          Add to Cart
-        </button> 
-
-        <button type="button" class="btn btn-success shop-button" onclick="document.location.href='checkout.html'">
-          Buy Now
-        </button>
-
-      </div>
+      <button type="button" class="btn btn-primary" onclick="document.location.href='checkout.html'">
+        Buy Now
+      </button>
+    </div>
   </div>
 
   </div>
 </div>
 <!-- Product Description -->
-</div>
+      </div>
 
 <!--  -->
-<div class="row row-underline"></div>
+<hr class="my-4">
 <!--  -->
 
-<div class="container">
+<div class="container buyTogether">
   <!--          1           -->
-  <div class="card text-center" style="width: max-content">
-    <div class="card-header fw-medium fs-30 bg-primary-subtle">
-      Buy Together and Save
-    </div>
-
-  <div class="container"> <!-- container start -->
-    <div class="card" style="width: 13rem;">
-      <img src="images/cameras/Nikon-Z9_bodysmall.avif" class="card-img-top object-fit-contain p-2" style="height: 180px">
-      <div class="card-body">
-        <h4 class="card-title">Nikon Z 9 Body</h4>
-        <h5 class="card-text">$6,999.00</h5>
+  <div class="card text-center" >
+      <div class="card-header fw-medium fs-30 bg-primary-subtle">
+        Buy Together and Save
       </div>
-    </div>
 
-    <div class="plus_sign">
-      <img src="images/plus.png" alt="">
-    </div>
-
-    <div class="card my-2" style="width: 13rem;">
-      <img src="images/cameras/Nikkor-Z-17-28mm-f2.8_medium.avif" class="card-img-top object-fit-contain p-2" style="height: 180px">
-      <div class="card-body">
-        <h4 class="card-title">Nikkor Z 17-28mm</h4>
-        <h5 class="card-text">$1,599.00</h5>
+    <div class="container"> <!-- container start -->
+      <div class="card" style="width: 13rem;">
+        <img src="images/cameras/Nikon-Z9_bodysmall.avif" class="card-img-top object-fit-contain p-2" style="height: 180px">
+        <div class="card-body">
+          <h4 class="card-title">Nikon Z 9 Body</h4>
+          <h5 class="card-text">$6,999.00</h5>
+        </div>
       </div>
-    </div>
-  </div> <!-- container end -->
 
-    <div class="card-footer">
-      <span>Total Price:</span>
-      <span class="beforeDiscount fw-medium">$8,598.00</span>
-      <span class="afterDiscount fw-medium">$8,498.00</span>
-    </div>
+      <div class="plus_sign">
+        <img src="images/plus.png" alt="">
+      </div>
+
+      <div class="card my-2" style="width: 13rem;">
+        <img src="images/cameras/Nikkor-Z-17-28mm-f2.8_medium.avif" class="card-img-top object-fit-contain p-2" style="height: 180px">
+        <div class="card-body">
+          <h4 class="card-title">Nikkor Z 17-28mm</h4>
+          <h5 class="card-text">$1,599.00</h5>
+        </div>
+      </div>
+    </div> <!-- container end -->
+
+      <div class="card-footer">
+        <span>Total Price:</span>
+        <span class="beforeDiscount fw-medium">$8,598.00</span>
+        <span class="afterDiscount fw-medium">$8,498.00</span>
+      </div>
 
   </div>
   <!--          1           -->
@@ -228,13 +268,13 @@ style="padding-left: 17px;">
   <!--          2           -->
 </div>
 
-<div class="row row-underline"></div>
+<hr class="my-4">
 
 <!-- Description -->
 <div class="accordion mb-2" id="accordionExample">
-  <div class="accordion-item rounded-0" >
+  <div class="accordion-item rounded-4" >
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button rounded-0 fw-medium text-black bg-primary-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size:18px">
+      <button class="accordion-button rounded-4 fw-medium text-black bg-primary-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="font-size:18px">
         Description
       </button>
     </h2>
@@ -243,7 +283,7 @@ style="padding-left: 17px;">
         <p class="text">The Nikon Z 9 takes mirrorless photography to new heights, delivering incredible performance and image quality combined with new professional features like 8K 60p video, a true blackout-free viewfinder, and unlimited connectivity. All of this, and more, is powered by a brand new 45.7-megapixel full-frame sensor and the EXPEED 7 processor.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Subject detection from deep learning. Automatic. Simultaneous.
         </h6>
         <p class="text">
@@ -262,7 +302,7 @@ style="padding-left: 17px;">
           Eye Detection AF automatically tracks the eyes of people, dogs, cats and birds (and similar creatures) even when they’re small in the frame, covered by hair, glasses or goggles, right-side up or upside down.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           3D Tracking + Subject Detection. A new dimension of AF.
         </h6>
         <p>
@@ -275,14 +315,14 @@ style="padding-left: 17px;">
           Subject detection and AF works all the way down to -6.5 EV. Activate Starlight Mode, and focus all the way down to -8.5 EV. And since you’ll be spending more time in the dark, the Z 9’s buttons are illuminated.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           A groundbreaking new processing engine.
         </h6>
         <p>
           EXPEED 7. The most powerful Nikon processing engine ever. 10x faster than previous generations. Handles complex AF and AE calculations at 120 cycles per second. Separately processes dual-streamed data from the stacked image sensor. Enables next-generation features like 120 fps still shooting, 8K video recording, a blackout-free viewing experience and more.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Go from zero to 120 fps in the press of a shutter.
         </h6>
         <p>
@@ -298,28 +338,28 @@ style="padding-left: 17px;">
           <i>When using high-speed CFexpress Type B 2.0 cards</i>
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           The fastest write speeds. Dual CFexpress Type B.
         </h6>
         <p>
           Under a newly designed latching door are two matched slots optimized for high-performance CFexpress Type B cards. The slots are independent from each other, so you can load cards with different write speeds—including XQD cards.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Finally, an electronic shutter you can trust.
         </h6>
         <p>
           The electronic shutter in the Z 9 achieves the world’s most minimal rolling-shutter distortion2, eliminating the need for a mechanical shutter. Shoot at shutter speeds up to 1/32,000 second in complete silence, with no shutter vibration and no concerns about shutter wear.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Silent mode. Become invisible.
         </h6>
         <p>
           When you need to be invisible, Silent Mode turns off menu sounds and VR Lock and minimizes lens drive noises. And since the Z 9 does not have a mechanical shutter, you can shoot without a shutter click—or plug in headphones so only you can hear the simulated shutter sound.
         </p>
     <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           8K/30p. In-camera. No overheating.
         </h6>
         <p>
@@ -329,21 +369,21 @@ style="padding-left: 17px;">
           <i>*At a temperature of 23°C/73.4°F</i>
         </p>
         <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           4K/30p from oversampled 8K.
         </h6>
         <p>
           Record dense 10-bit 4K UHD footage in-camera with full pixel readout from the Z 9’s outstanding sensor at 24, 25, 30p as ProRes 422 HQ or H.265 video. Or create dramatic 4K UHD slow motion sequences up to 120p. A 2.3x crop format with full pixel readout is available for getting closer to your subject without changing lenses.
         </p>
         <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Steady handheld shooting. Enhanced electronic VR.
         </h6>
         <p>
           The intelligence and processing power within EXPEED 7 improves electronic VR for video recording, correcting trapezoid distortion from wide angle lenses and allowing you to create smooth handheld walking shots.
         </p>
         <!--  -->
-        <h6 class="title">
+        <h6 class="title text-decoration-underline">
           Stacked CMOS sensor. 45.7-megapixels. Full frame.
         </h6>
         <p>

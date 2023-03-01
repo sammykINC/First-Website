@@ -10,60 +10,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
 
 <body>
 <!-- Navigation-->
-<nav class="navbar navbar-expand-md navigation-clean-search sticky-top" style="padding-left: 17px;">
+<nav class="navbar navbar-expand-md navigation-clean-search" 
+style="padding-left: 17px;">
   <div class="container">
-
     <!-- Left -->
     <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-white text-decoration-none fs-4 fw-bold" >
       <img src="images/logo/logo_5_white.png" alt="Bootstrap"  width="35px" class="me-1" >
       <span class="logo__text">Pixelated</span> 
     </a>
 
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="collapse navbar-collapse navbarHrefs" id="navcol-1">
+      <ul class="nav justify-content-left mb-md-0">
+        <li><a href="index.html" class="nav-link"> Homepage </a></li>
+        <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
+        <li><a href="aboutUs.html" class="nav-link text-danger"> About Us </a></li>
+        <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+      </ul>
+    </div>
+  
+    <!-- Right -->
+    <div class="d-flex align-items-center" id="authView">
+      <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
+        <a href="shoppingCart.html">
+          <img src="images/maybe.png" title="Shopping Cart">
+          <span class="badge bg-danger cartNotification"> 3 </span>
+        </a>
+      </div>
 
-  <div class="collapse navbar-collapse" id="navcol-1">
-    <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link"> Homepage </a></li>
-      <li><a href="cameras.html" class="nav-link"> Cameras </a></li>
-      <li><a href="aboutUs.html" class="nav-link text-danger"> About Us </a></li>
-      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
-    </ul>
-  </div>
+      <div class="position-relative" id="loggedInView">
+        <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+      </div>
 
-  <!-- Right -->
-  <div class="d-flex align-items-center" id="authView">
-    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
-      <a href="shoppingCart.html">
-        <img src="images/maybe.png" title="Shopping Cart">
-        <span class="badge bg-danger cartNotification"> 3 </span>
-      </a>
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+      <img src="images/login_white.png"> Login </button>
+
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+      <img src="images/signup_white.png"> Signup </button>
+
+      <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+      <img src="images/logout_white.png"> Logout </button>
     </div>
 
-    <div class="position-relative" id="loggedInView">
-      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    <!-- expandable navbar -->
+  <nav class="mobileNav">
+    <div class="container-fluid">
+      <img class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" src="images/navbarMenu_less.png" width="45px">
+        <!-- <span class="navbar-toggler-icon"></span> -->
     </div>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
-    <img src="images/login_white.png"> Login </button>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
-    <img src="images/signup_white.png"> Signup </button>
-
-    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
-    <img src="images/logout_white.png"> Logout </button>
+  </nav>
+    <div class="collapse mobileNavHrefs" id="navbarToggleExternalContent">
+      <div style="margin-right: -12px">
+          <ul class="nav">
+            <li><a href="index.html" class="nav-link text-danger"> Homepage </a></li>
+            <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
+            <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+            <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+          </ul>
+      </div>
+    </div>
+    
+    <!-- expandable navbar -->
   </div>
 </nav>
 <!-- Navigation-->
 
-<div class="container border border-dark-subtle bg-secondary-subtle main__content">
+<div class="container main__content" >
 
   <header>
     <h2 class="text-center mt-5 fw-bold text-danger">Location and Working Hours</h2>
@@ -71,8 +87,6 @@
 
 <!-- Map -->
 <div class="container d-flex justify-content-center mx-5 my-5">
-
-  
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.1975319951325!2d-0.1401175190216911!3d51.49124251637974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604e04b63d7f3%3A0xf5469b8b4dcf69b5!2sGrays%20of%20Westminster!5e0!3m2!1sen!2slt!4v1677411982764!5m2!1sen!2slt" width="1000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -116,24 +130,24 @@
 
 
 <!-- Section: Social media -->
-<section class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-  <!-- Left -->
-  
+<section class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom socialMediaSection">
+
+  <!-- Top Left -->
   <div class="me-5 d-lg-block">
     <span style="font-size: 25px;">Subscribe to our Newsletter!</span>
 
-      <div class="input-group mb-4 mt-3 align-items-center" style="width: 600px;">
+      <div class="input-group mb-4 mt-3 align-items-center newsLetterInput" >
         <span class="input-group-text rounded-start" id="basic-addon1">
           <img src="images/main_overview/mail.png" alt="">
         </span>
         <input type="text" class="form-control" placeholder="Enter your email..." aria-describedby="button-addon2" >
-        <button class="btn btn-outline-dark" type="button" id="button-addon2">Subscribe</button>
+        <button class="btn btn-primary " type="button" id="button-addon2">Subscribe</button>
       </div>
   </div>
 
-  <!-- Left -->
+  <!-- Top Left -->
 
-  <!-- Right -->
+  <!-- Top Right -->
   <div class="text-center d-flex align-items-end pb-4" >
 
     <button type="button" class="btn btn-link btn-floating ">
@@ -160,7 +174,7 @@
       style="width: 2rem"></a>
     </button>
     </div>
-  <!-- Right -->
+  <!-- Top Right -->
 </section>
 <!-- Section: Social media -->
 
@@ -171,9 +185,9 @@
     <div class="row mt-3">
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
         <!-- Content -->
-        <h6 class="text-uppercase fw-bold mb-4">
+        <h6 class="text-uppercase fw-bold mb-4 lowerFooterLogo">
           <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-black text-decoration-none fs-4 me-4 fw-bold" >
             <img src="images/logo/logo_5_black.png" alt="Bootstrap"  width="40px" class="me-1" >
             Pixelated
@@ -186,57 +200,54 @@
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">
           Products
         </h6>
         <p>
-          <a href="#!" class="text-reset">Cameras</a>
+          <a href="#" class="text-reset">Cameras</a>
         </p>
         <p>
-          <a href="#!" class="text-reset">Lenses</a>
+          <a href="#" class="text-reset">Lenses</a>
         </p>
         <p>
-          <a href="#!" class="text-reset">Accessories</a>
+          <a href="#" class="text-reset">Accessories</a>
         </p>
         <p>
-          <a href="#!" class="text-reset">More</a>
+          <a href="#" class="text-reset">More</a>
         </p>
       </div>
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">
           Useful links
         </h6>
         <p>
-          <a href="#!" class="text-reset">Pre-Order</a>
+          <a href="#" class="text-reset">Pre-Order</a>
         </p>
         <p>
-          <a href="#!" class="text-reset">Newsletter</a>
+          <a href="#" class="text-reset">Newsletter</a>
         </p>
         <p>
-          <a href="resetPass.html" class="text-reset">Reset Password</a>
+          <a href="#" class="text-reset">Return Policy</a>
         </p>
         <p>
-          <a href="#!" class="text-reset">Order History</a>
+          <a href="#" class="text-reset">Order History</a>
         </p>
       </div>
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-        <p>
-          <i class="fas fa-envelope me-3"></i>
-          support@pixelated.com
-        </p>
-        <p><i class="fas fa-phone me-3"></i> + 01 734 993 23</p>
-        <p><i class="fas fa-print me-3"></i> + 49 163 5162 8451</p>
+        <p> support@pixelated.com </p>
+        <p> + 01 734 993 23 </p>
+        <p> + 49 163 5162 8451 </p>
       </div>
       <!-- Grid column -->
     </div>
@@ -251,9 +262,9 @@
 
 
 <!-- Footer -->
-<footer class="text-center text-lg-start">
+<footer class="text-center text-lg-start mt-5">
   <!-- Copyright -->
-  <div class="text-center py-4 sticky-bottom">
+  <div class="text-center py-4 ">
     <div class="container px-5">
       <div class="text-white-50 small">
           <div class="mb-2">© Pixelated 2023. All Rights Reserved.</div>

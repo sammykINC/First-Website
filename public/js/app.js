@@ -1,11 +1,12 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { 
   getAuth, 
   onAuthStateChanged, 
   GoogleAuthProvider, 
-  createUserWithEmailAndPassword
+  createUserWithEmailAndPassword,
+  signInWithRedirect,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -62,4 +63,24 @@ window.signup = function(e){
   })
   console.log(obj);
 };
+
+// google login?
+// const googleLogin = document.querySelector("#googleLoginBtn");
+// googleLogin.addEventListener('click', (e) => {
+// signInWithRedirect(auth, provider)
+//   .then((result) => {
+
+//     const credential = GoogleAuthProvider.credentialFromResult(result);
+//     const token = credential.accessToken;
+
+//     const user = result.user;
+
+//   }).catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     const email = error.customData.email;
+//     const credential = GoogleAuthProvider.credentialFromError(error);
+//   });
+// })
+
 

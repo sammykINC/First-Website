@@ -47,3 +47,16 @@ TODO#
 3. profile??? not sure
 4. Shopping cart page/Checkout page!
 5. Function to prevent people from entering login/signup pages while already logged in
+
+
+Date: 3/1/2023
+
+Added! Queries -.> Homepage/Nikon Z9 (div's switch on 991px???)
+Added! expandable navbar
+Added! Shopping cart/Checkout page
+Cameras filter sidebar has been changed to an expandable topbar
+
+TODO#
+1. Add queries on Cameras page
+2. Fix Nikon Z9 div switch
+3. Clean up the code!

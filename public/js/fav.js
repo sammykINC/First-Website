@@ -3,7 +3,7 @@ function swapImagesOne(){
  var get = document.getElementById('imageSwapOne');
  if (get.src.includes("images/cameras/fav_icon.png")){
    
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
  }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -15,7 +15,7 @@ setTimeout (imageSwapOne, 1000)
 function swapImagesTwo(){
  var get = document.getElementById('imageSwapTwo');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -25,7 +25,7 @@ function swapImagesTwo(){
 function swapImagesThree(){
  var get = document.getElementById('imageSwapThree');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -35,7 +35,7 @@ function swapImagesThree(){
 function swapImagesFour(){
  var get = document.getElementById('imageSwapFour');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -45,7 +45,7 @@ function swapImagesFour(){
 function swapImagesFive(){
  var get = document.getElementById('imageSwapFive');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -55,7 +55,7 @@ function swapImagesFive(){
 function swapImagesSix(){
  var get = document.getElementById('imageSwapSix');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";
@@ -65,7 +65,7 @@ function swapImagesSix(){
 function swapImagesSeven(){
  var get = document.getElementById('imageSwapSeven');
  if (get.src.includes("images/cameras/fav_icon.png")){
-   get.src = "images/cameras/fav_icon_coloredOutline.png";
+   get.src = "images/cameras/fav_icon_colored.png";
 }
  else{
    get.src = "images/cameras/fav_icon.png";

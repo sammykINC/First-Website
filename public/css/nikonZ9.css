@@ -44,11 +44,6 @@
  overflow: hidden;
 }
 
-.row-underline{
- border-bottom: 2px solid #3798db;
- margin: 20px 0px 20px 0px;
-}
-
 .image_list li img{
  max-width: 100%;
 }
@@ -85,67 +80,102 @@ h6{
  font-weight: medium;
 }
 
-/*  */
+#show_image_popup{
+  position: absolute; /*  so that not take place   */
+  top: 50%;
+  left: 50%;
+  z-index: 1000; /*  adobe all elements   */
+  transform: translate(-50%, -50%); /*  make center   */
+ 
+  display: none; /*  to hide first time   */
+ }
+ #show_image_popup img{
+  max-width: 90%;
+  height: auto;
+ }
+ 
+ .imageModal{
+  min-width: 700px;
+  height: 1000px;
+ }
 
-input,
-textarea {
-  border: 1px solid #eeeeee;
-  box-sizing: border-box;
-  margin: 0;
-  outline: none;
-  padding: 10px;
-}
+ @media (max-width: 1400px) {
+  .buyTogether {
+    gap: 20px;
+  }
+  .image_selected{
+    padding: 5 10px 0 10px !important;
+  }
+  img[src="images/cameras/Nikon_Z9.avif"] {
+    padding: 0 !important;
+  }
+  .cameraBackLi {
+    padding: 5px !important;
+    height: 140px !important;
+  }
+  .cameraFrontLi{
+    padding: 5px !important;
+    height: 140px !important;
+  }
+ }
 
-input[type="button"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
+ @media (max-width: 1200px) {
+  .buyTogether {
+    width: 834px;
+  }
+  .image_list {
+    display: inline;
+  }
+  .image_selected{
+    margin-top: 25px;
+    padding: 5 10px 0 10px !important;
+  }
+  img[src="images/cameras/Nikon_Z9.avif"] {
+    padding: 0 !important;
+  }
+  .cameraBackLi {
+    padding: 5px !important;
+    height: 140px !important;
+  }
+  .cameraFrontLi{
+    padding: 5px !important;
+    height: 140px !important;
+  }
+ }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
+ @media (max-width: 991px) {
+  .buyTogether {
+    flex-direction: column;
+    margin: 20px 0 20px -30px;
+  }
+  .image_list {
+    width: 80%;
+    height: auto;
+    padding: 0;
+    margin-top: 25px;
+    gap: 5px;
+    flex-direction: column;
+    display: flex;
+    float: left;
+    /* Div's switched places??? */
+  }
+  img[src="images/cameras/Nikon_Z9.avif"] {
+    width: 350px !important;
+  }
+  .image_selected{
+    width: max-content;
+    float: right;
+  }
+  .mainCamera {
+    width: max-content;
+  }
+  .cameraPreviewImages{
+    width: 200px !important;
+  }
+ }
 
-.input-group {
-  clear: both;
-  margin: 15px 0;
-  position: relative;
-}
-
-.input-group input[type='button'] {
-  background-color: #eeeeee;
-  min-width: 38px;
-  width: auto;
-  transition: all 300ms ease;
-}
-
-.input-group .button-minus,
-.input-group .button-plus {
-  font-weight: bold;
-  height: 38px;
-  padding: 0;
-  width: 38px;
-  position: relative;
-}
-
-.input-group .quantity-field {
-  position: relative;
-  height: 38px;
-  left: -6px;
-  text-align: center;
-  width: 62px;
-  display: inline-block;
-  font-size: 13px;
-  margin: 0 0 5px;
-  resize: vertical;
-}
-
-.button-plus {
-  left: -13px;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
-  -webkit-appearance: none;
-}
-/*  */
+ @media (max-width: 576px) {
+  .buyTogether {
+    margin-left: -175px !important;
+  }
+ }

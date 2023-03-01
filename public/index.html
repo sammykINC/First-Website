@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
@@ -25,42 +26,57 @@ style="padding-left: 17px;">
       <span class="logo__text">Pixelated</span> 
     </a>
 
-  <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
-    <span class="sr-only">Toggle navigation</span>
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navcol-1">
-    <ul class="nav col-12 col-lfg-auto me-lg-auto justify-content-left mb-md-0">
-      <li><a href="index.html" class="nav-link text-danger"> Homepage </a></li>
-      <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
-      <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
-      <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
-    </ul>
-  </div>
-
+    <div class="collapse navbar-collapse navbarHrefs" id="navcol-1">
+      <ul class="nav justify-content-left mb-md-0">
+        <li><a href="index.html" class="nav-link text-danger"> Homepage </a></li>
+        <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
+        <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+        <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+      </ul>
+    </div>
   
-  <!-- Right -->
-  <div class="d-flex align-items-center" id="authView">
-    <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
-      <a href="shoppingCart.html">
-        <img src="images/maybe.png" title="Shopping Cart">
-        <span class="badge bg-danger cartNotification"> 3 </span>
-      </a>
+    <!-- Right -->
+    <div class="d-flex align-items-center" id="authView">
+      <div class="position-relative" style="margin-right: 15px" id="shoppingCart">
+        <a href="shoppingCart.html">
+          <img src="images/maybe.png" title="Shopping Cart">
+          <span class="badge bg-danger cartNotification"> 3 </span>
+        </a>
+      </div>
+
+      <div class="position-relative" id="loggedInView">
+        <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+      </div>
+
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
+      <img src="images/login_white.png"> Login </button>
+
+      <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
+      <img src="images/signup_white.png"> Signup </button>
+
+      <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
+      <img src="images/logout_white.png"> Logout </button>
     </div>
 
-    <div class="position-relative" id="loggedInView">
-      <a href="#"> <img src="images/account_white.png" title="Account"> </a>
+    <!-- expandable navbar -->
+  <nav class="mobileNav">
+    <div class="container-fluid">
+      <img class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" src="images/navbarMenu_less.png" width="45px">
+        <!-- <span class="navbar-toggler-icon"></span> -->
     </div>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="login" title="Login" onclick="document.location.href='login.html'"> 
-    <img src="images/login_white.png"> Login </button>
-
-    <button type="button" class="btn btn-primary ms-3 navButtons" id="loggedOutView" href="#" id="signup" title="Signup" onclick="document.location.href='signup.html'">
-    <img src="images/signup_white.png"> Signup </button>
-
-    <button type="button" id="loggedInView" class="btn btn-danger ms-3 logOutBtn navButtons" href="#" title="Logout">
-    <img src="images/logout_white.png"> Logout </button>
+  </nav>
+    <div class="collapse mobileNavHrefs" id="navbarToggleExternalContent">
+      <div style="margin-right: -12px">
+          <ul class="nav">
+            <li><a href="index.html" class="nav-link text-danger"> Homepage </a></li>
+            <li><a href="cameras.html" class="nav-link "> Cameras</a></li>
+            <li><a href="aboutUs.html" class="nav-link"> About Us </a></li>
+            <li><a href="wishlist.html" class="nav-link"> Wishlist </a></li>
+          </ul>
+      </div>
+    </div>
+    
+    <!-- expandable navbar -->
   </div>
 </nav>
 <!-- Navigation-->
@@ -73,10 +89,10 @@ style="padding-left: 17px;">
   height: 350px;">
 
     <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-white">
-        <h1 class="mb-3" id="bgh1">Meet the new Flagship.</h1>
-        <h4 class="mb-3" id="bgh4">Nikon Z9</h4>
-        <a class="btn btn-outline-light btn-lg" href="nikonZ9.html" role="button">
+      <div class="text-white headerText">
+        <h1 class="mb-3 bgh1">Meet the new Flagship.</h1>
+        <h4 class="mb-3 bgh4">Nikon Z9</h4>
+        <a class="btn btn-outline-light btn-lg headerButton" href="nikonZ9.html" role="button">
           Discover</a>
       </div>
     </div>
@@ -85,10 +101,10 @@ style="padding-left: 17px;">
 <!-- Header-->
 
 <!-- Start of main content -->
-<div class="container border border-dark-subtle bg-secondary-subtle">
+<div class="container">
 
 <!-- Start of Carousel -->
-<div id="carouselExampleRide" class="carousel slide mt-4" data-bs-ride="false">
+<div id="carouselExampleRide" class="carousel slide mt-4 carouselMainCont" data-bs-ride="false" >
   <div class="carousel-inner rounded-4 caruShadow">
 <!--          1          -->
     <div class="carousel-item active">
@@ -97,7 +113,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h1 class="pb-2 caroLab">Find out what makes a good lens</h1>
+        <h1 class="pb-2 carouselText">Find out what makes a good lens</h1>
       </div>
     </div>
 <!--          2          -->
@@ -107,7 +123,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h2 class="pb-2 caroLab">Low light camera settings for the best picture</h2>
+        <h2 class="pb-2 carouselText">Low light camera settings for the best picture</h2>
       </div>
     </div>
 <!--          3          -->
@@ -117,7 +133,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h2 class="pb-2 caroLab">Hiking was never this fun without a camera!</h2>
+        <h2 class="pb-2 carouselText">Hiking was never this fun without a camera!</h2>
       </div>
     </div>
 <!--          4          -->
@@ -127,7 +143,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h2 class="pb-2 caroLab">Top SONY tips/tricks for your next photoshoot</h2>
+        <h2 class="pb-2 carouselText">Top SONY tips/tricks for your next photoshoot</h2>
       </div>
     </div>
 <!--          5          -->
@@ -137,7 +153,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h2 class="pb-2 caroLab">Everything you will need for your next stargazing experience</h2>
+        <h2 class="pb-2 carouselText">Everything you will need for your next stargazing experience</h2>
       </div>
     </div>
 <!--          6          -->
@@ -147,7 +163,7 @@ style="padding-left: 17px;">
       height: 550px;
       object-fit: cover">
       <div class="carousel-caption d-flex d-md-block">
-        <h2 class="pb-2 caroLab">Tips how to get a good birds-eye-view shot</h2>
+        <h2 class="pb-2 carouselText">Tips how to get a good birds-eye-view shot</h2>
       </div>
     </div>
 <!--          7          -->
@@ -157,7 +173,7 @@ style="padding-left: 17px;">
   height: 550px;
   object-fit: cover">
   <div class="carousel-caption d-flex d-md-block">
-    <h2 class="pb-2 caroLab">Wide range lenses, perfect for you next landscape shot</h2>
+    <h2 class="pb-2 carouselText">Wide range lenses, perfect for you next landscape shot</h2>
   </div>
 </div>
 
@@ -193,9 +209,6 @@ style="padding-left: 17px;">
                 </div>
               </div>
               <!-- Product actions-->
-              <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-              </div> -->
             </div>
         </div>
 
@@ -210,23 +223,11 @@ style="padding-left: 17px;">
               <div class="text-center">
                 <!-- Product name-->
                 <h5 class="fw-bolder">Sony XQD G Series 64GB Memory Card</h5>
-                <!-- Product reviews-->
-                <!-- <div class="d-flex justify-content-center small text-warning mb-2">
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                    <div class="bi-star-fill"></div>
-                </div> -->
                 <!-- Product price-->
                 <span class="text-muted text-decoration-line-through">$189</span>
                 $149
               </div>
             </div>
-            <!-- Product actions-->
-            <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-            </div> -->
           </div>
         </div>
 
@@ -246,10 +247,6 @@ style="padding-left: 17px;">
                 $59.00
               </div>
             </div>
-            <!-- Product actions-->
-            <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-            </div> -->
           </div>
         </div>
 
@@ -264,128 +261,84 @@ style="padding-left: 17px;">
                     <div class="text-center">
                         <!-- Product name-->
                         <h5 class="fw-bolder">TCS Toque - Grey Waffle Knit</h5>
-                        <!-- Product reviews-->
-                        <!-- <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                        </div> -->
                         <!-- Product price-->
                         $14.95
                     </div>
                 </div>
-                <!-- Product actions-->
-                <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                </div> -->
             </div>
         </div>
 
         <div class="col mb-3 mt-4">
-            <div class="card h-100 cardProducts">
-                <!-- Sale badge-->
-                <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Save $10</div>
-                <!-- Product image-->
-                <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/SmallRig_L-Bracket_for_Canon_EOS_RP.jpg" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder" style="margin-bottom: 32px">SmallRig L-Bracket for Canon EOS RP</h5>
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$89.87</span>
-                        $79.87
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                </div> -->
+          <div class="card h-100 cardProducts">
+            <!-- Sale badge-->
+            <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Save $10</div>
+            <!-- Product image-->
+            <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/SmallRig_L-Bracket_for_Canon_EOS_RP.jpg" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder" style="margin-bottom: 32px">SmallRig L-Bracket for Canon EOS RP</h5>
+                <!-- Product price-->
+                <span class="text-muted text-decoration-line-through">$89.87</span>
+                $79.87
+              </div>
             </div>
+          </div>
         </div>
 
         <div class="col mb-3 mt-4">
-            <div class="card h-100 cardProducts">
-                <!-- Product image-->
-                <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/PhotoRepublik_77mm_MC_Circular_Polarizer.webp" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder" style="margin-bottom: 32px">PhotoRepublik 77mm MC Circular Polarizer</h5>
-                        <!-- Product price-->
-                        $99.00
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                </div> -->
+          <div class="card h-100 cardProducts">
+            <!-- Product image-->
+            <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/PhotoRepublik_77mm_MC_Circular_Polarizer.webp" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder" style="margin-bottom: 32px">PhotoRepublik 77mm MC Circular Polarizer</h5>
+                <!-- Product price-->
+                $99.00
+              </div>
             </div>
+          </div>
         </div>
 
         <div class="col mb-3 mt-4">
-            <div class="card h-100 cardProducts">
-                <!-- Sale badge-->
-                <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Save $100</div>
-                <!-- Product image-->
-                <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/RODE_RODECaster_Pro_Podcast_Production_Studio.webp" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder">RODE RODECaster Pro Podcast Production Studio</h5>
-                        <!-- Product reviews-->
-                        <!-- <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                        </div> -->
-                        <!-- Product price-->
-                        <span class="text-muted text-decoration-line-through">$699.00</span>
-                        $599.00
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                </div> -->
+          <div class="card h-100 cardProducts">
+            <!-- Sale badge-->
+            <div class="badge bg-danger text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Save $100</div>
+            <!-- Product image-->
+            <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/RODE_RODECaster_Pro_Podcast_Production_Studio.webp" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder">RODE RODECaster Pro Podcast Production Studio</h5>
+                <!-- Product price-->
+                <span class="text-muted text-decoration-line-through">$699.00</span>
+                $599.00
+              </div>
             </div>
+          </div>
         </div>
 
         <div class="col mb-3 mt-4">
-            <div class="card h-100 cardProducts">
-                <!-- Product image-->
-                <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/Sigma_USB_Dock_Canon_EF_Mount.webp" alt="..." />
-                <!-- Product details-->
-                <div class="card-body p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h5 class="fw-bolder" style="margin-bottom: 32px">Sigma USB Dock - Canon EF Mount</h5>
-                        <!-- Product reviews-->
-                        <!-- <div class="d-flex justify-content-center small text-warning mb-2">
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                            <div class="bi-star-fill"></div>
-                        </div> -->
-                        <!-- Product price-->
-                        $79.95
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                </div> -->
+          <div class="card h-100 cardProducts">
+            <!-- Product image-->
+            <img class="card-img-top p-2 cardProductsHov" src="images/main_overview/Sigma_USB_Dock_Canon_EF_Mount.webp" alt="..." />
+            <!-- Product details-->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder" style="margin-bottom: 32px">Sigma USB Dock - Canon EF Mount</h5>
+                <!-- Product price-->
+                $79.95
+              </div>
             </div>
+          </div>
         </div>
-      </div>
 
+    </div>
   </div>
 </section>
 <!-- End of Section -->
@@ -441,9 +394,9 @@ style="padding-left: 17px;">
 </div>
 <!-- End of Info -->
 
-<!-- Cards -->
-<div class="container px-4 px-lg-5 mt-5" id="custom-cards">
-  <h2 class="pb-1 border-bottom">Latest Articles</h2>
+<!-- Articles -->
+<h2 class="pb-1 border-bottom">Latest Articles</h2>
+<div class="container px-4 px-lg-5 mt-1" id="custom-cards">
 
   <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 mb-4 mt-1">
 
@@ -522,27 +475,27 @@ style="padding-left: 17px;">
 
   </div>
 </div>
-<!-- Cards -->
+<!-- Articles -->
 
 <!-- Section: Social media -->
-<section class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-  <!-- Left -->
-  
+<section class="container d-flex justify-content-center justify-content-lg-between p-4 border-bottom socialMediaSection">
+
+  <!-- Top Left -->
   <div class="me-5 d-lg-block">
     <span style="font-size: 25px;">Subscribe to our Newsletter!</span>
 
-      <div class="input-group mb-4 mt-3 align-items-center" style="width: 600px;">
+      <div class="input-group mb-4 mt-3 align-items-center newsLetterInput" >
         <span class="input-group-text rounded-start" id="basic-addon1">
           <img src="images/main_overview/mail.png" alt="">
         </span>
         <input type="text" class="form-control" placeholder="Enter your email..." aria-describedby="button-addon2" >
-        <button class="btn btn-outline-dark" type="button" id="button-addon2">Subscribe</button>
+        <button class="btn btn-primary " type="button" id="button-addon2">Subscribe</button>
       </div>
   </div>
 
-  <!-- Left -->
+  <!-- Top Left -->
 
-  <!-- Right -->
+  <!-- Top Right -->
   <div class="text-center d-flex align-items-end pb-4" >
 
     <button type="button" class="btn btn-link btn-floating ">
@@ -569,7 +522,7 @@ style="padding-left: 17px;">
       style="width: 2rem"></a>
     </button>
     </div>
-  <!-- Right -->
+  <!-- Top Right -->
 </section>
 <!-- Section: Social media -->
 
@@ -580,9 +533,9 @@ style="padding-left: 17px;">
     <div class="row mt-3">
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 ">
         <!-- Content -->
-        <h6 class="text-uppercase fw-bold mb-4">
+        <h6 class="text-uppercase fw-bold mb-4 lowerFooterLogo">
           <a href="index.html" class="d-flex align-items-center mb-1 mb-lg-0 text-black text-decoration-none fs-4 me-4 fw-bold" >
             <img src="images/logo/logo_5_black.png" alt="Bootstrap"  width="40px" class="me-1" >
             Pixelated
@@ -595,7 +548,7 @@ style="padding-left: 17px;">
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">
           Products
@@ -616,7 +569,7 @@ style="padding-left: 17px;">
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">
           Useful links
@@ -637,15 +590,12 @@ style="padding-left: 17px;">
       <!-- Grid column -->
 
       <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 lowerFooterLinks">
         <!-- Links -->
         <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-        <p>
-          <i class="fas fa-envelope me-3"></i>
-          support@pixelated.com
-        </p>
-        <p><i class="fas fa-phone me-3"></i> + 01 734 993 23</p>
-        <p><i class="fas fa-print me-3"></i> + 49 163 5162 8451</p>
+        <p> support@pixelated.com </p>
+        <p> + 01 734 993 23 </p>
+        <p> + 49 163 5162 8451 </p>
       </div>
       <!-- Grid column -->
     </div>
