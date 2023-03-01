@@ -138,7 +138,7 @@ img[src="images/maybe.png"] {
     width: fit-content;
   }
   .navButtons {
-    width: 89px;
+    width: 90px !important;
   }
   .articlesSettings {
     width: 350px !important;
