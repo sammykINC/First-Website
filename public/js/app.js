@@ -1,12 +1,10 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+
 import { 
   getAuth, 
   onAuthStateChanged, 
-  GoogleAuthProvider, 
   createUserWithEmailAndPassword,
-  signInWithRedirect,
 } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -21,8 +19,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
 
 // Auth state
@@ -36,51 +32,5 @@ onAuthStateChanged(auth, (user) => {
     setupUi();
   }
 });
-
-// Registration form
-var firstName = document.getElementById("firstName")
-var lastName = document.getElementById("lastName")
-var email = document.getElementById("email")
-var password = document.getElementById("password")
-var repPassword = document.getElementById("repPassword")
-
-window.signup = function(e){
-  e.preventDefault();
-  var obj = {
-    firstName:firstName.value,
-    lastName:lastName.value,
-    email:email.value,
-    password:password.value,
-    repPassword:repPassword.value
-  }
-  createUserWithEmailAndPassword(auth, obj.email, obj.password)
-  .then(function(success) {
-    alert('signup successfull');
-    window.location.replace('index.html');
-  })
-  .catch(function(error) {
-    console.log(alert('error' + error));
-  })
-  console.log(obj);
-};
-
-// google login?
-// const googleLogin = document.querySelector("#googleLoginBtn");
-// googleLogin.addEventListener('click', (e) => {
-// signInWithRedirect(auth, provider)
-//   .then((result) => {
-
-//     const credential = GoogleAuthProvider.credentialFromResult(result);
-//     const token = credential.accessToken;
-
-//     const user = result.user;
-
-//   }).catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     const email = error.customData.email;
-//     const credential = GoogleAuthProvider.credentialFromError(error);
-//   });
-// })
 
 

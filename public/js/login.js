@@ -1,11 +1,8 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
-import { 
-  getAuth, 
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
+import { initializeApp } 
+from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword } 
+from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCFNxYlLhsuMZ2CDkYzehLrrld7Otgbguc",
@@ -19,20 +16,17 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const provider = new GoogleAuthProvider();
 const auth = getAuth(app);
 
 // LOGIN FORM
 
-// getting all the objecst of html
-
-var email = document.getElementById("email")
-var password = document.getElementById("password")
+// getting the required objects from html
+const email = document.getElementById("email")
+const password = document.getElementById("password")
 
 window.login = function(e) {
  e.preventDefault();
- var obj = {
+ const obj = {
   email:email.value,
   password:password.value
  };
