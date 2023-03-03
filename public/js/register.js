@@ -1,3 +1,4 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword } 
 from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
 
@@ -40,8 +41,9 @@ window.signup = function(e){
   }
 
   // Required password input
-  if (!/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/.test(password)) {
-    alert ('Password must be at least 10 characters long and must contain an Upper case, Lower case, Special character and a Numeric letter')
+  if (/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)) {
+    alert ('Password must be at least 10 characters long and must contain an Upper case, Lower case, Special character and a Numeric letter');
+    return false;
   }
 
   // Check that the password and confirm password fields match

@@ -14,9 +14,10 @@
  border: none;
 }
 
-.product_info{
+.product_info span{
  color: #4d4d4d;
  display: inline-block;
+ width: 400px;
 }
 
 .shop-button{
@@ -99,11 +100,30 @@ h6{
   height: 1000px;
  }
 
- @media (max-width: 1400px) {
+ @media (max-width: 1399px) {
+  .detailContBtn button{
+    font-size: 14px !important;
+    padding: 5px !important;
+  }
+  .breadcrumb{
+    font-size: 14px;
+  }
+  .product_name{
+    font-size: 20px;
+  }
+  .product_price{
+    font-size: 18px;
+  }
+  .product_info {
+    height: 340px;
+    font-size: 14px;
+    margin-top: 5px !important;
+    margin-bottom: 2px !important;
+  }
   .buyTogether {
     gap: 20px;
   }
-  .image_selected{
+  .image_selected {
     padding: 5 10px 0 10px !important;
   }
   img[src="images/cameras/Nikon_Z9.avif"] {
@@ -111,22 +131,22 @@ h6{
   }
   .cameraBackLi {
     padding: 5px !important;
-    height: 140px !important;
+    height: 125px !important;
   }
   .cameraFrontLi{
     padding: 5px !important;
-    height: 140px !important;
+    height: 125px !important;
   }
  }
 
- @media (max-width: 1200px) {
+ @media (max-width: 1199px) {
   .buyTogether {
     width: 834px;
   }
   .image_list {
     display: inline;
   }
-  .image_selected{
+  .image_selected {
     margin-top: 25px;
     padding: 5 10px 0 10px !important;
   }
@@ -135,20 +155,48 @@ h6{
   }
   .cameraBackLi {
     padding: 5px !important;
-    height: 140px !important;
+    height: 130px !important;
   }
   .cameraFrontLi{
     padding: 5px !important;
-    height: 140px !important;
+    height: 130px !important;
   }
  }
 
  @media (max-width: 991px) {
+  .detailContBtn button{
+    font-size: 16px !important;
+    padding: 5px !important;
+  }
+  .breadcrumb{
+    font-size: 14px;
+    margin-top: 7px;
+  }
+  .product_name{
+    font-size: 24px;
+  }
+  .product_price{
+    font-size: 20px;
+  }
+  .product_info {
+    height: 415px;
+    font-size: 17px;
+    margin-top: 5px !important;
+    margin-bottom: 1px !important;
+  }
   .buyTogether {
     flex-direction: column;
     margin: 20px 0 20px -30px;
   }
-  .image_list {
+  .cameraBackLi {
+    padding: 5px !important;
+    height: 170px !important;
+  }
+  .cameraFrontLi{
+    padding: 5px !important;
+    height: 170px !important;
+  }
+  .cameraPreviewImages {
     width: 80%;
     height: auto;
     padding: 0;
@@ -156,7 +204,7 @@ h6{
     gap: 5px;
     flex-direction: column;
     display: flex;
-    float: left;
+    order: -1 !important;
     /* Div's switched places??? */
   }
   img[src="images/cameras/Nikon_Z9.avif"] {
@@ -165,12 +213,32 @@ h6{
   .image_selected{
     width: max-content;
     float: right;
+    margin-bottom: 7px;
   }
   .mainCamera {
     width: max-content;
   }
   .cameraPreviewImages{
     width: 200px !important;
+  }
+ }
+ 
+ @media (max-width: 767px) {
+  .cameraPreviewImages {
+    display: flex;
+    flex-direction: row !important;
+    width: 40%;
+    margin-top: 5px;
+    order: 2 !important;
+  }
+  .cameraBackLi {
+    padding: 5px !important;
+    height: max-content !important;
+
+  }
+  .cameraFrontLi{
+    padding: 5px !important;
+    height: max-content !important;
   }
  }
 

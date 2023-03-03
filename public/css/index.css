@@ -54,13 +54,32 @@
  .articlesSettings {
    width: fit-content;
    background-repeat: no-repeat;
+   height: 300px;
  }
  .articlesSettings h2 {
    font-size: 28px
  }
 }
 
+@media (max-width: 1199px) {
+  .articlesSettings {
+    height: 300px;
+    width: 300px;
+    margin-left: -55px ;
+  }
+  .allArticles{
+    width: 950px;
+    height: 450px;
+  }
+}
+
 @media (max-width: 991px) {
+  .allArticles {
+    height: auto;
+  }
+  .allArticles h2 {
+    font-size: 34px;
+  }
  .lowerFooterLinks {
    padding-left: 23px;
    width: fit-content;
@@ -69,11 +88,6 @@
    width: 89px;
  }
  .articlesSettings {
-   width: 350px !important;
-   height: 350px !important;
-   margin-left: 140px;
- }
- .articlesSettings { 
    width: 350px !important;
    height: 350px !important;
    margin-left: 140px;
